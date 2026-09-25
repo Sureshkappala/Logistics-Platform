@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Shipment | Stackly Customer Portal</title>
+  <meta name="description" content="Instant freight quotation, automated dispatch booking, and cargo spec configuration for enterprise shippers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- DASHBOARD LAYOUT -->
+  <div class="dashboard-layout">
+    <!-- DASHBOARD SIDEBAR -->
+    <aside class="dashboard-sidebar" aria-label="Customer Navigation">
+      <div class="sidebar-brand" style="padding: 1.25rem 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: space-between;">
+        <a href="customer-dashboard.html" aria-label="Stackly Homepage">
+          <img src="assets/images/logo-white.png" alt="Stackly" width="130" height="38" style="display: block;">
+        </a>
+        <button type="button" class="sidebar-close-btn" aria-label="Close Navigation Drawer">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <div class="sidebar-profile">
+        <img src="assets/images/avatar-1.webp" alt="Sarah Jenkins" class="profile-avatar">
+        <div>
+          <div class="profile-name">Sarah Jenkins</div>
+          <div class="profile-badge">Shipper &bull; NexaCorp</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-menu">
+        <a href="customer-dashboard.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>Dashboard</a>
+        <a href="my-shipments.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>My Shipments</a>
+        <a href="customer-track.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>Track Shipment</a>
+        <a href="customer-book.html" class="sidebar-menu-link active"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Book Shipment</a>
+        <a href="delivery-history.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Delivery History</a>
+        <a href="saved-addresses.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Saved Addresses</a>
+        <a href="notifications.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>Notifications</a>
+        <a href="settings.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>Settings</a>
+        <a href="login.html?logout=true" class="sidebar-menu-link sidebar-logout-btn" style="margin-top: auto; color: #fca5a5;">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+          Logout
+        </a>
+      </nav>
+    </aside>
+
+    <main class="dashboard-content-area">
+      <div class="dashboard-topbar">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <button class="dash-mobile-toggle" aria-label="Toggle Navigation">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <span>Menu</span>
+          </button>
+          <div>
+            <h1 class="dash-heading">Book Freight Shipment</h1>
+            <p class="dash-sub">Configure cargo specs, calculate contracted corporate rates, and instantly dispatch.</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.75rem;">
+          <a href="my-shipments.html" class="btn btn-outline btn-sm">View Active Orders</a>
+        </div>
+      </div>
+
+      <!-- Booking Wizard Grid -->
+      <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem;">
+        
+        <div class="dash-card">
+          <h2 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.25rem;">1. Origin & Destination Terminals</h2>
+          <form id="customerBookForm" onsubmit="event.preventDefault(); showToast('Order STK-88490 created! Dispatched to regional fleet.', 'success'); setTimeout(() => window.location.href='my-shipments.html', 1500);">
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
+              <div class="form-group">
+                <label class="form-label" for="bookOrigin">Pickup Terminal / Warehouse</label>
+                <select id="bookOrigin" class="form-control" required>
+                  <option value="CHI-HUB" selected>Stackly Logistics Hub #4 (Chicago, IL)</option>
+                  <option value="HOU-HUB">Gulf Coast Terminal #1 (Houston, TX)</option>
+                  <option value="LAX-HUB">Pacific Gateway Depot #2 (Los Angeles, CA)</option>
+                  <option value="NYC-HUB">Northeast Logistics Center (Newark, NJ)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="bookDest">Delivery Destination</label>
+                <select id="bookDest" class="form-control" required>
+                  <option value="DFW-HUB" selected>Dallas Distribution Center (Dallas, TX)</option>
+                  <option value="ATL-HUB">Southeast Gateway Hub (Atlanta, GA)</option>
+                  <option value="SEA-HUB">Northwest Terminal (Seattle, WA)</option>
+                  <option value="MIA-HUB">Miami Cross-Dock Terminal (Miami, FL)</option>
+                </select>
+              </div>
+            </div>
+
+            <h2 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.25rem; border-top: 1px solid var(--border-color); padding-top: 1.25rem;">2. Freight Service Mode & Vehicle Type</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
+              <label style="border: 2px solid var(--blue-600); background: #eff6ff; border-radius: 8px; padding: 0.85rem; text-align: center; cursor: pointer;">
+                <input type="radio" name="freightService" value="FTL" checked style="margin-bottom: 0.35rem;">
+                <div style="font-weight: 700; font-size: 0.9rem; color: var(--blue-900);">Full Truckload (FTL)</div>
+                <div style="font-size: 0.75rem; color: var(--gray-500);">Dedicated 53ft Dry Van</div>
+              </label>
+              <label style="border: 1px solid var(--border-color); border-radius: 8px; padding: 0.85rem; text-align: center; cursor: pointer;">
+                <input type="radio" name="freightService" value="LTL" style="margin-bottom: 0.35rem;">
+                <div style="font-weight: 700; font-size: 0.9rem; color: var(--dark-text);">Less-Than-Truckload</div>
+                <div style="font-size: 0.75rem; color: var(--gray-500);">1-6 Standard Pallets</div>
+              </label>
+              <label style="border: 1px solid var(--border-color); border-radius: 8px; padding: 0.85rem; text-align: center; cursor: pointer;">
+                <input type="radio" name="freightService" value="REEFER" style="margin-bottom: 0.35rem;">
+                <div style="font-weight: 700; font-size: 0.9rem; color: var(--dark-text);">Cold Chain Reefer</div>
+                <div style="font-size: 0.75rem; color: var(--gray-500);">-20&deg;C to +15&deg;C Temp</div>
+              </label>
+              <label style="border: 1px solid var(--border-color); border-radius: 8px; padding: 0.85rem; text-align: center; cursor: pointer;">
+                <input type="radio" name="freightService" value="AIR" style="margin-bottom: 0.35rem;">
+                <div style="font-weight: 700; font-size: 0.9rem; color: var(--dark-text);">Air Express Next-Day</div>
+                <div style="font-size: 0.75rem; color: var(--gray-500);">Priority Jet Cargo</div>
+              </label>
+            </div>
+
+            <h2 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.25rem; border-top: 1px solid var(--border-color); padding-top: 1.25rem;">3. Cargo Specifications</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
+              <div class="form-group">
+                <label class="form-label" for="cargoWeight">Total Weight (lbs)</label>
+                <input type="number" id="cargoWeight" class="form-control" value="18500" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="palletCount">Pallet Quantity</label>
+                <input type="number" id="palletCount" class="form-control" value="14" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="cargoType">Commodity Type</label>
+                <select id="cargoType" class="form-control">
+                  <option>Industrial Electronics</option>
+                  <option>Pharmaceutical Supplies</option>
+                  <option>Automotive Components</option>
+                  <option>Consumer Packaged Goods</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem;">
+              <label class="checkbox-label">
+                <input type="checkbox" checked>
+                <span>Liftgate Required at Pickup</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked>
+                <span>Certified Real-Time IoT GPS Telematics</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block" style="font-size: 1rem;">
+              Confirm Booking & Generate BOL (#STK-88490)
+            </button>
+          </form>
+        </div>
+
+        <!-- Live Estimate Summary Card -->
+        <div>
+          <div class="dash-card" style="margin-bottom: 1.5rem; border: 1px solid var(--blue-200); background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);">
+            <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; color: var(--blue-900);">Contract Rate Summary</h3>
+            
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.6rem; font-size: 0.9rem;">
+              <span style="color: var(--gray-600);">Base Linehaul (925 mi):</span>
+              <strong>$1,850.00</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.6rem; font-size: 0.9rem;">
+              <span style="color: var(--gray-600);">Fuel Surcharge (DOE Index):</span>
+              <strong>$240.00</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.6rem; font-size: 0.9rem;">
+              <span style="color: var(--gray-600);">Enterprise Tier Discount (15%):</span>
+              <strong style="color: #10b981;">-$313.50</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-size: 0.9rem;">
+              <span style="color: var(--gray-600);">IoT Telematics Gateway:</span>
+              <strong style="color: #10b981;">Included ($0)</strong>
+            </div>
+
+            <div style="border-top: 2px dashed var(--blue-200); padding-top: 0.85rem; display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              <span style="font-weight: 700; color: var(--dark-text); font-size: 1.05rem;">Total Guaranteed Cost:</span>
+              <span style="font-size: 1.5rem; font-weight: 800; color: var(--blue-600);">$1,776.50</span>
+            </div>
+
+            <div style="background: rgba(37,99,235,0.08); padding: 0.75rem; border-radius: 6px; font-size: 0.8rem; color: var(--blue-800);">
+              &#9889; Guaranteed pickup window: <strong>Tomorrow 08:00 - 10:00 CST</strong>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem;">Quick Re-order Templates</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+              <button type="button" class="btn btn-outline btn-sm" style="text-align: left; justify-content: space-between; display: flex;" onclick="showToast('Template CHI → DFW Reefer loaded into form.', 'info');">
+                <span>Chicago → Dallas Reefer</span>
+                <span style="color: var(--blue-600);">&rarr;</span>
+              </button>
+              <button type="button" class="btn btn-outline btn-sm" style="text-align: left; justify-content: space-between; display: flex;" onclick="showToast('Template LAX → SEA FTL loaded into form.', 'info');">
+                <span>LA → Seattle FTL Dry Van</span>
+                <span style="color: var(--blue-600);">&rarr;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

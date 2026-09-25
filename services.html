@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Stackly Transportation & Supply Chain Solutions</title>
+  <meta name="description" content="Explore Stackly enterprise transportation services: Freight, Road Transport, Express Delivery, Last-Mile, Warehousing, and Fleet Management.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- STICKY NAVBAR (MATCHING SCREENSHOT) -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Stackly Platform">
+        <img src="assets/images/logo.png" alt="Stackly" class="brand-logo-img" width="144" height="42">
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="road-freight.html" class="nav-link active">Services</a>
+        <a href="tracking.html" class="nav-link">Tracking</a>
+        <a href="fleet.html" class="nav-link">Fleet</a>
+        <a href="warehouse.html" class="nav-link">Warehousing</a>
+        <a href="shipping-quote.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login-link">Login</a>
+        <a href="book-shipment.html" class="btn-get-started">Get Started</a>
+        <button class="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- MOBILE NAVIGATION DRAWER (MATCHING USER SCREENSHOT) -->
+  <div class="mobile-nav-overlay" aria-hidden="true"></div>
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo.png" alt="Stackly" class="brand-logo-img" width="130" height="36">
+      </a>
+      <button class="drawer-close-btn" aria-label="Close menu">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+
+    <!-- Search bar in drawer -->
+    <div class="drawer-search-box">
+      <svg class="drawer-search-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      <input type="text" placeholder="Search tracking, services..." aria-label="Search site">
+    </div>
+
+    <ul class="drawer-menu-list">
+      <li class="drawer-menu-item"><a href="index.html"><span>Home</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="about.html"><span>About Us</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="road-freight.html" class="active"><span>Freight Services</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="tracking.html"><span>Live Tracking</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="fleet.html"><span>Fleet Network</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="warehouse.html"><span>Warehousing</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="shipping-quote.html"><span>Rate Calculator</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="contact.html"><span>Contact Concierge</span> <span class="drawer-arrow">&rarr;</span></a></li>
+    </ul>
+
+        <!-- Action Buttons (Login & Get Started) -->
+    <div class="drawer-btn-group">
+      <a href="login.html" class="btn-drawer-outline">Login</a>
+      <a href="book-shipment.html" class="btn-drawer-accent">Get Started</a>
+    </div>
+
+    <!-- Direct Dispatch Access Contact Info Moved Downside -->
+    <div class="drawer-info-card">
+      <div class="drawer-info-tag">DIRECT DISPATCH ACCESS</div>
+      <div class="drawer-info-row">Call: <strong>+1 (800) 555-SAFE</strong></div>
+      <div class="drawer-info-row">Email: <strong>dispatch@stackly.com</strong></div>
+      <div class="drawer-info-row" style="margin-top:0.4rem; font-size:0.8rem; color:#64748b;">Hubs: Chicago &bull; Rotterdam &bull; Singapore &bull; Dubai</div>
+    </div>
+  </div>
+
+<main>
+    <!-- PAGE HEADER HERO -->
+    <section class="hero-section" style="padding: 3.5rem 0 4rem;">
+      <div class="container text-center" style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <div class="section-tag section-tag-amber">Our Capabilities</div>
+        <h1 class="hero-title" style="font-size: 2.85rem; margin-bottom: 1rem;">End-to-End Logistics Services</h1>
+        <p class="hero-text" style="margin: 0 auto 1.5rem;">
+          From heavy multimodal freight to high-speed metropolitan parcels and regional warehouse distribution, our services are engineered for speed, safety, and operational excellence.
+        </p>
+        <a href="shipping-quote.html" class="btn btn-accent">Get an Instant Quote</a>
+      </div>
+    </section>
+
+    <!-- SERVICES DETAILED LIST -->
+    <section class="section-py" style="background-color: var(--white);">
+      <div class="container">
+        
+        <!-- Service 1: Freight -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4.5rem;">
+          <div>
+            <div class="section-tag">Intermodal & Highway</div>
+            <h2 class="section-title">Freight Transportation</h2>
+            <p class="section-desc" style="margin-bottom: 1.25rem;">
+              Full Truckload (FTL) and Less Than Truckload (LTL) services connecting major distribution corridors across North America with guaranteed capacity and priority scheduling.
+            </p>
+            <ul class="solution-bullets" style="margin-bottom: 1.5rem;">
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Full Truckload (FTL) & LTL options</li>
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Real-time temperature & vibration telemetry</li>
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Cross-border customs pre-clearance</li>
+            </ul>
+            <a href="book-shipment.html" class="btn btn-primary">Book Freight</a>
+          </div>
+          <div class="split-img-column">
+            <img src="assets/images/service-freight.webp" alt="Intermodal freight transportation and shipping containers" width="700" height="460">
+          </div>
+        </div>
+
+        <!-- Service 2: Road Transport -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4.5rem;">
+          <div style="order: 2;">
+            <div class="section-tag section-tag-amber">Dedicated Fleet</div>
+            <h2 class="section-title">Commercial Road Transport</h2>
+            <p class="section-desc" style="margin-bottom: 1.25rem;">
+              Over-the-road trucking services backed by Euro 6 and CARB compliant tractors, equipped with lane-departure safety and dual-driver teams for nonstop line-haul runs.
+            </p>
+            <ul class="solution-bullets" style="margin-bottom: 1.5rem;">
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Team-driver expedited linehaul</li>
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Dry van, flatbed & specialized roll-off</li>
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> 99.1% mechanical reliability index</li>
+            </ul>
+            <a href="fleet.html" class="btn btn-navy">View Road Fleet</a>
+          </div>
+          <div class="split-img-column" style="order: 1;">
+            <img src="assets/images/service-road.webp" alt="Commercial road transport semi-truck fleet" width="700" height="460">
+          </div>
+        </div>
+
+        <!-- Service 3: Express Delivery -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4.5rem;">
+          <div>
+            <div class="section-tag">Urgent Shipments</div>
+            <h2 class="section-title">Expedited & Express Delivery</h2>
+            <p class="section-desc" style="margin-bottom: 1.25rem;">
+              When deadlines are non-negotiable, our dedicated express courier network handles high-value parts, critical legal parcels, and emergency medical supplies with priority dispatch.
+            </p>
+            <ul class="solution-bullets" style="margin-bottom: 1.5rem;">
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Same-day metropolitan delivery windows</li>
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Next-Flight-Out (NFO) air cargo integration</li>
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Direct recipient signature verification</li>
+            </ul>
+            <a href="shipping-quote.html" class="btn btn-primary">Check Express Rates</a>
+          </div>
+          <div class="split-img-column">
+            <img src="assets/images/service-express.webp" alt="Express courier cargo delivery" width="700" height="460">
+          </div>
+        </div>
+
+        <!-- Service 4: Last-Mile Delivery -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4.5rem;">
+          <div style="order: 2;">
+            <div class="section-tag section-tag-amber">Precision Fulfillment</div>
+            <h2 class="section-title">Last-Mile Doorstep Logistics</h2>
+            <p class="section-desc" style="margin-bottom: 1.25rem;">
+              Delighting end-consumers and retail receivers with flexible delivery time slots, real-time courier map tracking, and instant photo proof-of-delivery.
+            </p>
+            <ul class="solution-bullets" style="margin-bottom: 1.5rem;">
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Dynamic route optimization for urban density</li>
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Automated recipient SMS notifications</li>
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Reverse logistics and returns handling</li>
+            </ul>
+            <a href="book-shipment.html" class="btn btn-navy">Schedule Last-Mile</a>
+          </div>
+          <div class="split-img-column" style="order: 1;">
+            <img src="assets/images/service-lastmile.webp" alt="Last mile delivery courier" width="700" height="460">
+          </div>
+        </div>
+
+        <!-- Service 5: Warehousing -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4.5rem;">
+          <div>
+            <div class="section-tag">Smart Storage</div>
+            <h2 class="section-title">Warehousing & Cross-Docking</h2>
+            <p class="section-desc" style="margin-bottom: 1.25rem;">
+              Secure storage, pick & pack fulfillment, and cross-docking facilities across strategic logistics hubs with automated warehouse management systems (WMS).
+            </p>
+            <ul class="solution-bullets" style="margin-bottom: 1.5rem;">
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Real-time inventory telemetry & alerts</li>
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Automated high-bay pallet racking</li>
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Temperature-controlled cold rooms</li>
+            </ul>
+            <a href="warehouse.html" class="btn btn-primary">Explore Warehouses</a>
+          </div>
+          <div class="split-img-column">
+            <img src="assets/images/service-warehouse.webp" alt="Automated logistics warehouse storage" width="700" height="460">
+          </div>
+        </div>
+
+        <!-- Service 6: Cargo Handling -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+          <div style="order: 2;">
+            <div class="section-tag section-tag-amber">Specialized Freight</div>
+            <h2 class="section-title">Heavy Cargo & Terminal Handling</h2>
+            <p class="section-desc" style="margin-bottom: 1.25rem;">
+              Heavy-lift cranes, container drayage, airport tarmac logistics, and oversized industrial shipment management handled by certified safety riggers.
+            </p>
+            <ul class="solution-bullets" style="margin-bottom: 1.5rem;">
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Out-of-Gauge (OOG) oversized permits</li>
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Port drayage & container de-vanning</li>
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Bonded cargo escort teams</li>
+            </ul>
+            <a href="contact.html" class="btn btn-navy">Consult Cargo Specialist</a>
+          </div>
+          <div class="split-img-column" style="order: 1;">
+            <img src="assets/images/service-cargohandling.webp" alt="Air freight cargo loading operations" width="700" height="460">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <!-- SECTION 1: FREIGHT SERVICE LEVEL AGREEMENTS (SLA) MATRIX -->
+    <section class="section-py bg-light" aria-labelledby="sla-heading">
+      <div class="container">
+        <div class="text-center" style="max-width: 720px; margin: 0 auto 2.5rem;">
+          <span class="badge badge-primary">Service Guarantee</span>
+          <h2 id="sla-heading" class="section-title">Freight Service Level Agreement (SLA) Matrix</h2>
+          <p class="section-subtitle">Choose the exact speed, visibility level, and dedicated infrastructure for your supply chain requirements.</p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="sla-table">
+            <thead>
+              <tr>
+                <th>Service Tier</th>
+                <th>Transit Time</th>
+                <th>Tracking Frequency</th>
+                <th>Temperature Monitoring</th>
+                <th>Dedicated Escort</th>
+                <th>Insurance Cap</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Standard Economy</strong></td>
+                <td>3 – 5 Business Days</td>
+                <td>Checkpoint Milestones</td>
+                <td>Ambient Only</td>
+                <td>Standard Dispatch</td>
+                <td>Up to $100,000</td>
+              </tr>
+              <tr>
+                <td><strong><span style="color: #0d9488;">Priority Express</span></strong></td>
+                <td>Next-Day / 24-48 Hours</td>
+                <td>Live GPS (1-Min Updates)</td>
+                <td>Passive Cold-Pack</td>
+                <td>Priority Priority Lane</td>
+                <td>Up to $500,000</td>
+              </tr>
+              <tr>
+                <td><strong><span style="color: #c2410c;">Critical Dedicated Charter</span></strong></td>
+                <td>Same-Day / Direct Nonstop</td>
+                <td>IoT Telematics (Sub-second)</td>
+                <td>Active Cryo & Pharma (-80°C)</td>
+                <td>Dual-Driver Bonded Escort</td>
+                <td>Up to $5,000,000+</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: SPECIALIZED HANDLING & HAZMAT CAPABILITIES -->
+    <section class="section-py" aria-labelledby="specialized-heading">
+      <div class="container">
+        <div class="solutions-content-grid" style="align-items: center;">
+          <div class="split-img-column">
+            <img src="assets/images/service-cargohandling.webp" alt="High precision specialized cargo loading" width="700" height="460">
+          </div>
+          <div>
+            <span class="badge badge-accent">Specialized Cargo</span>
+            <h2 id="specialized-heading" class="section-title">Engineered Handling for Critical & Dangerous Goods</h2>
+            <p class="section-desc">Certified compliance for lithium batteries, radioactive medical isotopes, aerospace engines, and oversized industrial machinery.</p>
+            <ul class="solution-bullets" style="margin: 1.5rem 0;">
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> <strong>IATA / IMO DGR Certified:</strong> Classes 1 through 9 hazardous material compliance.</li>
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> <strong>White-Glove Inside Delivery:</strong> Hydraulic liftgates, clean-room unpack, and debris removal.</li>
+              <li><svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> <strong>High-Value Cargo Escorts:</strong> Geofenced armored transport with panic alarms.</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Request Specialized Transport Brief &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: MULTIMODAL TRANSIT TIME & CO2 INDEX -->
+    <section class="section-py bg-light" aria-labelledby="index-heading">
+      <div class="container">
+        <div class="text-center" style="max-width: 680px; margin: 0 auto 2.5rem;">
+          <span class="badge badge-primary">Multimodal Benchmark</span>
+          <h2 id="index-heading" class="section-title">Speed vs. Carbon Trade-off Analysis</h2>
+          <p class="section-subtitle">Compare relative velocity, price index, and environmental impact across global logistics modes.</p>
+        </div>
+
+        <div class="fleet-grid">
+          <div class="fleet-card">
+            <div class="fleet-card-body">
+              <span class="fleet-badge">Air Express</span>
+              <h3 class="fleet-title">Fastest Velocity</h3>
+              <p class="fleet-desc">1-3 Days Door-to-Door. Ideal for high-value tech, emergency parts, and perishable life sciences.</p>
+              <div style="margin-top: 1rem; border-top: 1px solid #e2e8f0; padding-top: 1rem;">
+                <div style="display:flex; justify-content:space-between; font-size:0.88rem; margin-bottom:0.4rem;"><span>Speed:</span><strong>Instant Priority</strong></div>
+                <div style="display:flex; justify-content:space-between; font-size:0.88rem;"><span>CO₂ Index:</span><span style="color:#c2410c; font-weight:700;">500 g/t-km</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fleet-card">
+            <div class="fleet-card-body">
+              <span class="fleet-badge" style="background:#e0f2fe; color:#0369a1;">Road & Intermodal Rail</span>
+              <h3 class="fleet-title">Balanced Regional Network</h3>
+              <p class="fleet-desc">2-5 Days Cross-Continent. Optimal cost-to-velocity ratio for FTL and LTL commercial pallet shipments.</p>
+              <div style="margin-top: 1rem; border-top: 1px solid #e2e8f0; padding-top: 1rem;">
+                <div style="display:flex; justify-content:space-between; font-size:0.88rem; margin-bottom:0.4rem;"><span>Speed:</span><strong>Standard Guaranteed</strong></div>
+                <div style="display:flex; justify-content:space-between; font-size:0.88rem;"><span>CO₂ Index:</span><span style="color:#0284c7; font-weight:700;">60 g/t-km</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fleet-card">
+            <div class="fleet-card-body">
+              <span class="fleet-badge" style="background:#dcfce7; color:#15803d;">Ocean Freight (FCL/LCL)</span>
+              <h3 class="fleet-title">Highest Volume Economy</h3>
+              <p class="fleet-desc">14-28 Days Port-to-Port. Lowest cost per cubic meter for bulk consumer goods and industrial supplies.</p>
+              <div style="margin-top: 1rem; border-top: 1px solid #e2e8f0; padding-top: 1rem;">
+                <div style="display:flex; justify-content:space-between; font-size:0.88rem; margin-bottom:0.4rem;"><span>Speed:</span><strong>Scheduled Sailings</strong></div>
+                <div style="display:flex; justify-content:space-between; font-size:0.88rem;"><span>CO₂ Index:</span><span style="color:#15803d; font-weight:700;">12 g/t-km</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+
+  <!-- 3-PILL GRADIENT CTA SECTION (MATCHING SCREENSHOT) -->
+  <section class="final-cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-inner-card">
+        <h2 id="cta-heading" class="cta-tagline">
+          Join thousands of enterprise shippers and supply chain leaders streamlining freight with Stackly.
+        </h2>
+        <div class="cta-pill-group">
+          <a href="book-shipment.html" class="btn-pill-primary">Start Shipping Free</a>
+          <a href="shipping-quote.html" class="btn-pill-outline">Get Instant Quote</a>
+          <a href="tracking.html" class="btn-pill-outline">Live Tracking</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- 4-COLUMN ENTERPRISE FOOTER (MATCHING SCREENSHOT) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand & Socials -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Platform">
+            <img src="assets/images/logo-white.png" alt="Stackly" class="brand-logo-img" width="144" height="42">
+          </a>
+          <p class="footer-bio-text">
+            Delivering modern logistics, real-time freight visibility, automated dispatch intelligence, and certified temperature-controlled warehousing worldwide.
+          </p>
+          <div class="footer-social-row">
+            <a href="404.html" class="footer-social-pill" aria-label="LinkedIn">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-pill" aria-label="Twitter / X">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-pill" aria-label="Instagram">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-pill" aria-label="YouTube">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Stackly</a></li>
+            <li><a href="services.html">Freight Services</a></li>
+            <li><a href="tracking.html">Live Tracking</a></li>
+            <li><a href="fleet.html">Fleet Network</a></li>
+            <li><a href="shipping-quote.html">Instant Rate Quote</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="careers.html">Careers & Drivers</a></li>
+            <li><a href="faq.html">Help & FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Verticals -->
+        <div>
+          <h4 class="footer-col-title">Freight Verticals</h4>
+          <ul class="footer-links-list">
+            <li><a href="road-freight.html">Road Linehaul (FTL/LTL)</a></li>
+            <li><a href="air-freight.html">Air Freight Express</a></li>
+            <li><a href="ocean-freight.html">Ocean Container Shipping</a></li>
+            <li><a href="cold-chain.html">Cold Chain Logistics</a></li>
+            <li><a href="customs.html">Customs Brokerage</a></li>
+            <li><a href="warehouse.html">High-Bay Warehousing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Portals & Compliance -->
+        <div>
+          <h4 class="footer-col-title">Portals & Legal</h4>
+          <ul class="footer-links-list">
+            <li><a href="customer-dashboard.html">Shipper Portal</a></li>
+            <li><a href="driver-dashboard.html">Driver Telematics Hub</a></li>
+            <li><a href="admin-dashboard.html">Admin Command Tower</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy & Telematics Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>&copy; 2026 Stackly Logistics Platform Inc. All rights reserved. Sub-second GPS & Telematics Certified.</div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="404.html">Security</a>
+          <a href="contact.html">Dispatch</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

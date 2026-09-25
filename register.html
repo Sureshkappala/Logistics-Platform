@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Enterprise Account | Stackly</title>
+  <meta name="description" content="Register for a Stackly account as a Shipper, Commercial Driver, or Terminal Admin.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="auth-page-section">
+    <div class="auth-card" style="max-width: 540px;">
+            <div style="text-align: center; margin-bottom: 1.75rem;">
+        <a href="index.html" aria-label="Return to Homepage">
+          <img src="assets/images/logo.png" alt="Stackly" class="brand-logo-img" width="150" height="42" style="display: inline-block;">
+        </a>
+      </div>
+      <div class="auth-card-header">
+        <h1 class="auth-title">Register Account</h1>
+        <p class="auth-subtitle">Join the leading enterprise freight and logistics network.</p>
+      </div>
+
+      <form id="registerForm" novalidate>
+        <!-- Role Selection Tabs -->
+        <label class="form-label">Select Account Role</label>
+        <div class="role-selector-grid">
+          <button type="button" class="role-opt-btn active" data-role="customer">Customer / Shipper</button>
+          <button type="button" class="role-opt-btn" data-role="driver">Fleet Driver</button>
+        </div>
+        <input type="hidden" id="selectedRoleInput" value="customer">
+
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label class="form-label" for="regName">Full Name *</label>
+            <input type="text" id="regName" class="form-control" placeholder="Alex Morgan" required pattern="^[a-zA-Z\s.'-]+$" title="Name can only contain letters and spaces" oninput="this.value = this.value.replace(/[^a-zA-Z\s.'-]/g, '')">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regCompany">Company / Org Name</label>
+            <input type="text" id="regCompany" class="form-control" placeholder="Apex Logistics Inc.">
+          </div>
+        </div>
+
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label class="form-label" for="regEmail">Work Email *</label>
+            <input type="email" id="regEmail" class="form-control" placeholder="alex@apex.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regMobile">Mobile Phone *</label>
+            <input type="tel" id="regMobile" class="form-control" placeholder="+1 (555) 012-4491" required inputmode="tel" pattern="^[\d\s+\-()]{7,20}$" title="Mobile number can only contain digits and valid symbols (+ - ( ))" oninput="this.value = this.value.replace(/[^0-9+\s\-()]/g, '')">
+          </div>
+        </div>
+
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label class="form-label" for="regPass">Password *</label>
+            <div class="password-input-wrap">
+              <input type="password" id="regPass" class="form-control" placeholder="••••••••" required>
+              <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regConfirmPass">Confirm Password *</label>
+            <input type="password" id="regConfirmPass" class="form-control" placeholder="••••••••" required>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label class="checkbox-label">
+            <input type="checkbox" id="regTerms" required>
+            <span>I agree to the <a href="404.html" style="color: var(--blue-600); font-weight: 600;">Terms & Conditions</a> and <a href="404.html" style="color: var(--blue-600); font-weight: 600;">Privacy Policy</a>.</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-lg btn-block">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
+          Complete Registration
+        </button>
+      </form>
+
+      <div style="text-align: center; margin-top: 1.75rem; font-size: 0.875rem; color: var(--gray-600); border-top: 1px solid var(--border-color); padding-top: 1.25rem;">
+        Already registered?
+        <a href="login.html" style="color: var(--blue-600); font-weight: 700;">Sign In Here</a>
+      </div>
+    </div>
+  </main>
+
+
+
+    <!-- 4-COLUMN ENTERPRISE FOOTER (MATCHING SCREENSHOT) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand & Socials -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Platform">
+            <img src="assets/images/logo-white.png" alt="Stackly" class="brand-logo-img" width="144" height="42">
+          </a>
+          <p class="footer-bio-text">
+            Delivering modern logistics, real-time freight visibility, automated dispatch intelligence, and certified temperature-controlled warehousing worldwide.
+          </p>
+          <div class="footer-social-row">
+            <a href="404.html" class="footer-social-pill" aria-label="LinkedIn">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-pill" aria-label="Twitter / X">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-pill" aria-label="Instagram">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-pill" aria-label="YouTube">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Stackly</a></li>
+            <li><a href="services.html">Freight Services</a></li>
+            <li><a href="tracking.html">Live Tracking</a></li>
+            <li><a href="fleet.html">Fleet Network</a></li>
+            <li><a href="shipping-quote.html">Instant Rate Quote</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="careers.html">Careers & Drivers</a></li>
+            <li><a href="faq.html">Help & FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Verticals -->
+        <div>
+          <h4 class="footer-col-title">Freight Verticals</h4>
+          <ul class="footer-links-list">
+            <li><a href="road-freight.html">Road Linehaul (FTL/LTL)</a></li>
+            <li><a href="air-freight.html">Air Freight Express</a></li>
+            <li><a href="ocean-freight.html">Ocean Container Shipping</a></li>
+            <li><a href="cold-chain.html">Cold Chain Logistics</a></li>
+            <li><a href="customs.html">Customs Brokerage</a></li>
+            <li><a href="warehouse.html">High-Bay Warehousing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Portals & Compliance -->
+        <div>
+          <h4 class="footer-col-title">Portals & Legal</h4>
+          <ul class="footer-links-list">
+            <li><a href="customer-dashboard.html">Shipper Portal</a></li>
+            <li><a href="driver-dashboard.html">Driver Telematics Hub</a></li>
+            <li><a href="admin-dashboard.html">Admin Command Tower</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy & Telematics Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>&copy; 2026 Stackly Logistics Platform Inc. All rights reserved. Sub-second GPS & Telematics Certified.</div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="404.html">Security</a>
+          <a href="contact.html">Dispatch</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

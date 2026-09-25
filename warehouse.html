@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warehousing & Inventory Operations | Stackly</title>
+  <meta name="description" content="Explore Stackly connected warehousing network, smart inventory management, cold-chain fulfillment, and cross-docking hubs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- STICKY NAVBAR (MATCHING SCREENSHOT) -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Stackly Platform">
+        <img src="assets/images/logo.png" alt="Stackly" class="brand-logo-img" width="144" height="42">
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="tracking.html" class="nav-link">Tracking</a>
+        <a href="fleet.html" class="nav-link">Fleet</a>
+        <a href="warehouse.html" class="nav-link active">Warehousing</a>
+        <a href="shipping-quote.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login-link">Login</a>
+        <a href="book-shipment.html" class="btn-get-started">Get Started</a>
+        <button class="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- MOBILE NAVIGATION DRAWER (MATCHING USER SCREENSHOT) -->
+  <div class="mobile-nav-overlay" aria-hidden="true"></div>
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo.png" alt="Stackly" class="brand-logo-img" width="130" height="36">
+      </a>
+      <button class="drawer-close-btn" aria-label="Close menu">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+
+    <!-- Search bar in drawer -->
+    <div class="drawer-search-box">
+      <svg class="drawer-search-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      <input type="text" placeholder="Search tracking, services..." aria-label="Search site">
+    </div>
+
+    <ul class="drawer-menu-list">
+      <li class="drawer-menu-item"><a href="index.html"><span>Home</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="about.html"><span>About Us</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="services.html"><span>Freight Services</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="tracking.html"><span>Live Tracking</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="fleet.html"><span>Fleet Network</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="warehouse.html" class="active"><span>Warehousing</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="shipping-quote.html"><span>Rate Calculator</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="contact.html"><span>Contact Concierge</span> <span class="drawer-arrow">&rarr;</span></a></li>
+    </ul>
+
+        <!-- Action Buttons (Login & Get Started) -->
+    <div class="drawer-btn-group">
+      <a href="login.html" class="btn-drawer-outline">Login</a>
+      <a href="book-shipment.html" class="btn-drawer-accent">Get Started</a>
+    </div>
+
+    <!-- Direct Dispatch Access Contact Info Moved Downside -->
+    <div class="drawer-info-card">
+      <div class="drawer-info-tag">DIRECT DISPATCH ACCESS</div>
+      <div class="drawer-info-row">Call: <strong>+1 (800) 555-SAFE</strong></div>
+      <div class="drawer-info-row">Email: <strong>dispatch@stackly.com</strong></div>
+      <div class="drawer-info-row" style="margin-top:0.4rem; font-size:0.8rem; color:#64748b;">Hubs: Chicago &bull; Rotterdam &bull; Singapore &bull; Dubai</div>
+    </div>
+  </div>
+
+<main>
+    <!-- PAGE HERO -->
+    <section class="hero-section" style="padding: 3.5rem 0 4rem;">
+      <div class="container text-center" style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <div class="section-tag section-tag-amber">Connected Facilities</div>
+        <h1 class="hero-title" style="font-size: 2.85rem; margin-bottom: 1rem;">Enterprise Warehousing Network</h1>
+        <p class="hero-text" style="margin: 0 auto 1.5rem;">
+          Over 850,000 square feet of strategically positioned high-bay storage, automated conveyor sortation, and climate-controlled cross-dock facilities.
+        </p>
+        <a href="book-shipment.html" class="btn btn-accent">Request Pallet Space</a>
+      </div>
+    </section>
+
+    <!-- WAREHOUSE LOCATIONS & CAPACITY CONSOLE -->
+    <section class="section-py" style="background-color: var(--white);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Facility Telemetry</div>
+          <h2 class="section-title">Regional Distribution Hubs</h2>
+          <p class="section-desc">Live capacity monitoring and inventory distribution across key logistics corridors.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 3.5rem;">
+          <!-- Hub 1: Chicago -->
+          <div style="background-color: var(--gray-50); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; box-shadow: var(--shadow-sm);">
+            <div style="height: 180px; overflow: hidden;">
+              <img src="assets/images/warehouse-hub1.webp" alt="Logistics distribution center inventory sorting" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--navy-900);">Midwest Gateway (Chicago, IL)</h3>
+                <span class="badge badge-green">Operational</span>
+              </div>
+              <p style="font-size: 0.875rem; color: var(--gray-600); margin-bottom: 1.25rem;">
+                Primary intermodal transshipment depot with 28 automated loading bays and rail siding access.
+              </p>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.4rem;">
+                <span style="color: var(--gray-500);">Active Capacity:</span>
+                <strong>280,000 / 350,000 Sq Ft (80%)</strong>
+              </div>
+              <div class="progress-track" style="margin-bottom: 1.25rem;">
+                <div class="progress-fill" style="width: 80%;"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--gray-700);">
+                <span>Daily Inbound: <strong>48 Trucks</strong></span>
+                <span>Daily Outbound: <strong>62 Trucks</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hub 2: Seattle -->
+          <div style="background-color: var(--gray-50); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; box-shadow: var(--shadow-sm);">
+            <div style="height: 180px; overflow: hidden;">
+              <img src="assets/images/warehouse-hub2.webp" alt="Cold chain temperature-controlled warehouse" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--navy-900);">Pacific Northwest Hub (Seattle, WA)</h3>
+                <span class="badge badge-green">Operational</span>
+              </div>
+              <p style="font-size: 0.875rem; color: var(--gray-600); margin-bottom: 1.25rem;">
+                Dedicated cold-chain reefer vault and aerospace precision components warehouse.
+              </p>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.4rem;">
+                <span style="color: var(--gray-500);">Active Capacity:</span>
+                <strong>145,000 / 220,000 Sq Ft (66%)</strong>
+              </div>
+              <div class="progress-track" style="margin-bottom: 1.25rem;">
+                <div class="progress-fill amber" style="width: 66%;"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--gray-700);">
+                <span>Daily Inbound: <strong>24 Trucks</strong></span>
+                <span>Daily Outbound: <strong>38 Trucks</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hub 3: Dallas -->
+          <div style="background-color: var(--gray-50); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; box-shadow: var(--shadow-sm);">
+            <div style="height: 180px; overflow: hidden;">
+              <img src="assets/images/service-warehouse.webp" alt="Automated logistics warehouse storage" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--navy-900);">South Central Hub (Dallas, TX)</h3>
+                <span class="badge badge-green">Operational</span>
+              </div>
+              <p style="font-size: 0.875rem; color: var(--gray-600); margin-bottom: 1.25rem;">
+                High-speed retail fulfillment center with robotic sortation and same-day delivery launchpads.
+              </p>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.4rem;">
+                <span style="color: var(--gray-500);">Active Capacity:</span>
+                <strong>210,000 / 280,000 Sq Ft (75%)</strong>
+              </div>
+              <div class="progress-track" style="margin-bottom: 1.25rem;">
+                <div class="progress-fill green" style="width: 75%;"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--gray-700);">
+                <span>Daily Inbound: <strong>36 Trucks</strong></span>
+                <span>Daily Outbound: <strong>55 Trucks</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WAREHOUSE INVENTORY SUMMARY TABLE -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Live Cross-Dock & Storage Schedule</h3>
+            <a href="book-shipment.html" class="btn btn-outline btn-sm">+ Book Warehouse Dock Slot</a>
+          </div>
+
+          <div class="table-responsive">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Bay ID</th>
+                  <th>Facility Location</th>
+                  <th>Carrier / Vehicle</th>
+                  <th>Cargo Category</th>
+                  <th>Scheduled Dock Time</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>BAY-14</strong></td>
+                  <td>Chicago Gateway (Hub A)</td>
+                  <td>LP-TRK-402 (Marcus Reed)</td>
+                  <td>Electronics & Consumer Tech</td>
+                  <td>Today, 18:30 CST</td>
+                  <td><span class="badge badge-blue">Inbound Scheduled</span></td>
+                </tr>
+                <tr>
+                  <td><strong>BAY-08</strong></td>
+                  <td>Dallas Distribution Hub</td>
+                  <td>LP-VAN-118 (Elena Gomez)</td>
+                  <td>E-Commerce Express Parcels</td>
+                  <td>Today, 15:45 CST</td>
+                  <td><span class="badge badge-amber">Loading Active</span></td>
+                </tr>
+                <tr>
+                  <td><strong>BAY-02</strong></td>
+                  <td>Seattle Reefer Hub</td>
+                  <td>LP-TRK-709 (Standby Unit)</td>
+                  <td>Perishables & Pharmaceuticals</td>
+                  <td>Tomorrow, 07:00 PST</td>
+                  <td><span class="badge badge-green">Dock Reserved</span></td>
+                </tr>
+                <tr>
+                  <td><strong>BAY-21</strong></td>
+                  <td>Miami Seaport Logistics</td>
+                  <td>LP-TRK-890 (David Ross)</td>
+                  <td>Intermodal Container Freight</td>
+                  <td>Today, 14:15 EST</td>
+                  <td><span class="badge badge-gray">Unloaded & Cleared</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- SECTION 1: 5-ZONE CLIMATE & AUTOMATED STORAGE EXPLORER -->
+    <section class="section-py bg-light" aria-labelledby="zones-heading">
+      <div class="container">
+        <div class="text-center" style="max-width: 720px; margin: 0 auto 2.5rem;">
+          <span class="badge badge-primary">Facility Specs</span>
+          <h2 id="zones-heading" class="section-title">5-Zone Climate & High-Density Storage Specifications</h2>
+          <p class="section-subtitle">Engineered environments maintaining calibrated humidity, airflow, and strict temperature thresholds.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+            </div>
+            <h3 class="service-title">Ambient Dry Storage</h3>
+            <p class="service-desc"><strong>15°C to 25°C (59°F to 77°F).</strong> 40ft clear ceiling heights with narrow-aisle wire-guided turret racking for dry foods and consumer electronics.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"></path></svg>
+            </div>
+            <h3 class="service-title">Cold & Chilled Chambers</h3>
+            <p class="service-desc"><strong>2°C to 8°C (36°F to 46°F).</strong> Continuous digital monitoring with backup generator systems for fresh produce, biologics, and pharmaceuticals.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+            </div>
+            <h3 class="service-title">Deep Freeze & Cryogenic</h3>
+            <p class="service-desc"><strong>-20°C to -80°C (-4°F to -112°F).</strong> Active liquid nitrogen dosing and validated cryogenic freezers for specialized clinical vaccines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: AUTOMATED ROBOTICS & FULFILLMENT VELOCITY -->
+    <section class="section-py" aria-labelledby="robotics-heading">
+      <div class="container">
+        <div class="solutions-content-grid" style="align-items: center;">
+          <div class="split-img-column">
+            <img src="assets/images/service-lastmile.webp" alt="High speed robotic warehouse fulfillment picking" width="700" height="460">
+          </div>
+          <div>
+            <span class="badge badge-accent">Automation</span>
+            <h2 id="robotics-heading" class="section-title">Autonomous Mobile Robots (AMR) & Pick-to-Light</h2>
+            <p class="section-desc">Our intelligent warehouse execution system deploys autonomous robotic shuttles to accelerate order processing from hours to minutes.</p>
+            <div class="cert-grid" style="grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem;">
+              <div style="background: #f8fafc; padding: 1.25rem; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 1.5rem; font-weight: 800; color: #0d9488;">99.98%</div>
+                <div style="font-weight: 600; color: #1e293b;">Order Pick Accuracy</div>
+                <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.25rem;">Automated barcode & RFID verification at every pick face.</p>
+              </div>
+              <div style="background: #f8fafc; padding: 1.25rem; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 1.5rem; font-weight: 800; color: #0f172a;">18 Mins</div>
+                <div style="font-weight: 600; color: #1e293b;">Dock-to-Stock Velocity</div>
+                <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.25rem;">Fastest intake turnaround in modern contract logistics.</p>
+              </div>
+            </div>
+            <div style="margin-top: 1.5rem;">
+              <a href="shipping-quote.html" class="btn btn-navy">Get Storage & Fulfillment Rates &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CROSS-DOCKING & TRANSSHIPMENT SCHEDULE -->
+    <section class="section-py bg-light" aria-labelledby="crossdock-heading">
+      <div class="container">
+        <div class="text-center" style="max-width: 680px; margin: 0 auto 2.5rem;">
+          <span class="badge badge-primary">Cross-Dock Network</span>
+          <h2 id="crossdock-heading" class="section-title">Zero-Dwell Inbound-to-Outbound Transfer</h2>
+          <p class="section-subtitle">Direct pallet transloading without long-term storage fees, reducing supply chain handling costs by up to 35%.</p>
+        </div>
+
+        <div class="how-it-works-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3 class="step-title">Inbound Unload</h3>
+            <p class="step-desc">Trailers dock at assigned bay; pallets are RFID scanned and weighed within 15 minutes of gate entry.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3 class="step-title">Dynamic Sortation</h3>
+            <p class="step-desc">Conveyors route cargo by destination postal code directly across the staging floor.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3 class="step-title">Outbound Consolidation</h3>
+            <p class="step-desc">Pallets are loaded onto outgoing long-haul tractors heading to regional distribution hubs.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">04</div>
+            <h3 class="step-title">Instant BOL Generation</h3>
+            <p class="step-desc">Electronic Bill of Lading (eBOL) generated and synced to customer portal in real-time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+
+  <!-- 3-PILL GRADIENT CTA SECTION (MATCHING SCREENSHOT) -->
+  <section class="final-cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-inner-card">
+        <h2 id="cta-heading" class="cta-tagline">
+          Join thousands of enterprise shippers and supply chain leaders streamlining freight with Stackly.
+        </h2>
+        <div class="cta-pill-group">
+          <a href="book-shipment.html" class="btn-pill-primary">Start Shipping Free</a>
+          <a href="shipping-quote.html" class="btn-pill-outline">Get Instant Quote</a>
+          <a href="tracking.html" class="btn-pill-outline">Live Tracking</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- 4-COLUMN ENTERPRISE FOOTER (MATCHING SCREENSHOT) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand & Socials -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Platform">
+            <img src="assets/images/logo-white.png" alt="Stackly" class="brand-logo-img" width="144" height="42">
+          </a>
+          <p class="footer-bio-text">
+            Delivering modern logistics, real-time freight visibility, automated dispatch intelligence, and certified temperature-controlled warehousing worldwide.
+          </p>
+          <div class="footer-social-row">
+            <a href="404.html" class="footer-social-pill" aria-label="LinkedIn">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-pill" aria-label="Twitter / X">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-pill" aria-label="Instagram">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-pill" aria-label="YouTube">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Stackly</a></li>
+            <li><a href="services.html">Freight Services</a></li>
+            <li><a href="tracking.html">Live Tracking</a></li>
+            <li><a href="fleet.html">Fleet Network</a></li>
+            <li><a href="shipping-quote.html">Instant Rate Quote</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="careers.html">Careers & Drivers</a></li>
+            <li><a href="faq.html">Help & FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Verticals -->
+        <div>
+          <h4 class="footer-col-title">Freight Verticals</h4>
+          <ul class="footer-links-list">
+            <li><a href="road-freight.html">Road Linehaul (FTL/LTL)</a></li>
+            <li><a href="air-freight.html">Air Freight Express</a></li>
+            <li><a href="ocean-freight.html">Ocean Container Shipping</a></li>
+            <li><a href="cold-chain.html">Cold Chain Logistics</a></li>
+            <li><a href="customs.html">Customs Brokerage</a></li>
+            <li><a href="warehouse.html">High-Bay Warehousing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Portals & Compliance -->
+        <div>
+          <h4 class="footer-col-title">Portals & Legal</h4>
+          <ul class="footer-links-list">
+            <li><a href="customer-dashboard.html">Shipper Portal</a></li>
+            <li><a href="driver-dashboard.html">Driver Telematics Hub</a></li>
+            <li><a href="admin-dashboard.html">Admin Command Tower</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy & Telematics Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>&copy; 2026 Stackly Logistics Platform Inc. All rights reserved. Sub-second GPS & Telematics Certified.</div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="404.html">Security</a>
+          <a href="contact.html">Dispatch</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping Quote & Rate Calculator | Stackly</title>
+  <meta name="description" content="Calculate real-time freight and delivery rate estimates. Compare standard, express, and same-day multimodal transit speeds.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- STICKY NAVBAR (MATCHING SCREENSHOT) -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Stackly Platform">
+        <img src="assets/images/logo.png" alt="Stackly" class="brand-logo-img" width="144" height="42">
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="tracking.html" class="nav-link">Tracking</a>
+        <a href="fleet.html" class="nav-link">Fleet</a>
+        <a href="warehouse.html" class="nav-link">Warehousing</a>
+        <a href="shipping-quote.html" class="nav-link active">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login-link">Login</a>
+        <a href="book-shipment.html" class="btn-get-started">Get Started</a>
+        <button class="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- MOBILE NAVIGATION DRAWER (MATCHING USER SCREENSHOT) -->
+  <div class="mobile-nav-overlay" aria-hidden="true"></div>
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo.png" alt="Stackly" class="brand-logo-img" width="130" height="36">
+      </a>
+      <button class="drawer-close-btn" aria-label="Close menu">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+
+    <!-- Search bar in drawer -->
+    <div class="drawer-search-box">
+      <svg class="drawer-search-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      <input type="text" placeholder="Search tracking, services..." aria-label="Search site">
+    </div>
+
+    <ul class="drawer-menu-list">
+      <li class="drawer-menu-item"><a href="index.html"><span>Home</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="about.html"><span>About Us</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="services.html"><span>Freight Services</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="tracking.html"><span>Live Tracking</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="fleet.html"><span>Fleet Network</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="warehouse.html"><span>Warehousing</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="shipping-quote.html" class="active"><span>Rate Calculator</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="contact.html"><span>Contact Concierge</span> <span class="drawer-arrow">&rarr;</span></a></li>
+    </ul>
+
+        <!-- Action Buttons (Login & Get Started) -->
+    <div class="drawer-btn-group">
+      <a href="login.html" class="btn-drawer-outline">Login</a>
+      <a href="book-shipment.html" class="btn-drawer-accent">Get Started</a>
+    </div>
+
+    <!-- Direct Dispatch Access Contact Info Moved Downside -->
+    <div class="drawer-info-card">
+      <div class="drawer-info-tag">DIRECT DISPATCH ACCESS</div>
+      <div class="drawer-info-row">Call: <strong>+1 (800) 555-SAFE</strong></div>
+      <div class="drawer-info-row">Email: <strong>dispatch@stackly.com</strong></div>
+      <div class="drawer-info-row" style="margin-top:0.4rem; font-size:0.8rem; color:#64748b;">Hubs: Chicago &bull; Rotterdam &bull; Singapore &bull; Dubai</div>
+    </div>
+  </div>
+
+<main>
+    <!-- PAGE HERO -->
+    <section class="hero-section" style="padding: 3.5rem 0 4rem;">
+      <div class="container text-center" style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <div class="section-tag section-tag-amber">Transparent Pricing</div>
+        <h1 class="hero-title" style="font-size: 2.85rem; margin-bottom: 1rem;">Shipping Rate Estimator</h1>
+        <p class="hero-text" style="margin: 0 auto 1.5rem;">
+          Get instant, dynamic rate estimations for standard parcel, LTL freight, palletized cargo, and express same-day courier runs.
+        </p>
+      </div>
+    </section>
+
+    <!-- CALCULATOR INTERACTIVE SECTION -->
+    <section class="section-py" style="background-color: var(--gray-50);">
+      <div class="container container-sm">
+        <div class="quote-calc-card">
+          <div class="calc-grid">
+            <!-- Form Parameters -->
+            <div>
+              <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--navy-900); margin-bottom: 1.5rem;">Shipment Specifications</h2>
+              
+              <form id="shippingQuoteForm" onsubmit="event.preventDefault();">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                  <div>
+                    <label class="form-label" for="quotePickup">Pickup City / Hub</label>
+                    <select id="quotePickup" class="form-control">
+                      <option value="Seattle Hub">Seattle Hub (WA)</option>
+                      <option value="Chicago Terminal">Chicago Terminal (IL)</option>
+                      <option value="Dallas Hub" selected>Dallas Hub (TX)</option>
+                      <option value="Atlanta Depot">Atlanta Depot (GA)</option>
+                      <option value="Denver Central">Denver Central (CO)</option>
+                      <option value="New York Gateway">New York Gateway (NY)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="form-label" for="quoteDelivery">Delivery Destination</label>
+                    <select id="quoteDelivery" class="form-control">
+                      <option value="Austin Metro" selected>Austin Metro (TX)</option>
+                      <option value="Chicago Terminal">Chicago Terminal (IL)</option>
+                      <option value="Miami Seaport">Miami Seaport (FL)</option>
+                      <option value="Seattle Hub">Seattle Hub (WA)</option>
+                      <option value="Los Angeles Yard">Los Angeles Yard (CA)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 1rem; margin-bottom: 1rem;">
+                  <div>
+                    <label class="form-label" for="quotePkgType">Package / Cargo Category</label>
+                    <select id="quotePkgType" class="form-control">
+                      <option value="standard_parcel">Standard Box / Parcel</option>
+                      <option value="pallet">Palletized Freight (Wooden Skid)</option>
+                      <option value="heavy_freight">Heavy Industrial Machinery</option>
+                      <option value="fragile_goods">Fragile / High-Value Electronics</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="form-label" for="quoteWeight">Estimated Weight (kg)</label>
+                    <input type="number" id="quoteWeight" class="form-control" value="25" min="1" max="10000">
+                  </div>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                  <label class="form-label">Dimensions (L &times; W &times; H in cm)</label>
+                  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
+                    <input type="number" id="dimL" class="form-control" placeholder="Length (cm)" value="50">
+                    <input type="number" id="dimW" class="form-control" placeholder="Width (cm)" value="40">
+                    <input type="number" id="dimH" class="form-control" placeholder="Height (cm)" value="30">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" style="margin-bottom: 0.75rem;">Service Speed Tier</label>
+                  <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+                    <label class="checkbox-label" style="background-color: var(--gray-50); padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                      <input type="radio" name="quoteSpeed" value="standard" checked>
+                      <div>
+                        <strong>Standard Ground Freight</strong>
+                        <div style="font-size: 0.8rem; color: var(--gray-500);">3 - 5 business days transit &bull; Most economical</div>
+                      </div>
+                    </label>
+
+                    <label class="checkbox-label" style="background-color: var(--gray-50); padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                      <input type="radio" name="quoteSpeed" value="express">
+                      <div>
+                        <strong>Priority Express Delivery</strong>
+                        <div style="font-size: 0.8rem; color: var(--gray-500);">1 - 2 business days expedited transit slot</div>
+                      </div>
+                    </label>
+
+                    <label class="checkbox-label" style="background-color: var(--gray-50); padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                      <input type="radio" name="quoteSpeed" value="same_day">
+                      <div>
+                        <strong>Guaranteed Same-Day Metro Courier</strong>
+                        <div style="font-size: 0.8rem; color: var(--gray-500);">Same-day priority flight or direct van dispatch</div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Instant Calculation Summary Box -->
+            <div class="calc-result-box">
+              <div>
+                <span class="section-tag section-tag-amber" style="margin-bottom: 1rem;">Demo Live Calculation</span>
+                <div style="font-size: 0.85rem; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.05em;">Estimated Shipping Rate</div>
+                <div class="calc-price-big" id="calculatedPriceDisplay">$81.25</div>
+                <div style="font-size: 0.8rem; color: var(--gray-400); margin-bottom: 1.5rem;">*Sample estimate based on demo distance and weight multipliers.</div>
+
+                <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                  <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                    <span style="color: var(--gray-400);">Route:</span>
+                    <strong style="color: var(--white);" id="quoteRouteDisplay">Dallas Hub &rarr; Austin Metro</strong>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                    <span style="color: var(--gray-400);">Estimated Transit:</span>
+                    <strong style="color: var(--amber-400);" id="calculatedEtaDisplay">3 - 5 Business Days</strong>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                    <span style="color: var(--gray-400);">Weight:</span>
+                    <strong style="color: var(--white);" id="quoteWeightDisplay">25 kg</strong>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                    <span style="color: var(--gray-400);">Insurance & Tracking:</span>
+                    <strong style="color: var(--emerald-500);">Included Free</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 2rem;">
+                <a href="book-shipment.html" class="btn btn-accent btn-block">Proceed to Booking &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- SECTION 1: VOLUMETRIC WEIGHT (CBM) DIMENSIONAL CALCULATOR GUIDE -->
+    <section class="section-py bg-light" aria-labelledby="dim-heading">
+      <div class="container">
+        <div class="text-center" style="max-width: 720px; margin: 0 auto 2.5rem;">
+          <span class="badge badge-primary">Dimensional Formula</span>
+          <h2 id="dim-heading" class="section-title">How Chargeable Weight Is Calculated</h2>
+          <p class="section-subtitle">Freight rates apply to either the actual gross weight or volumetric weight, whichever is higher.</p>
+        </div>
+
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="badge-tech badge-tech-blue" style="margin-bottom: 0.5rem;">Air Freight</div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a;">IATA Ratio: 1:6000</h3>
+            <p style="font-size: 0.88rem; color: #64748b; margin-top: 0.5rem;">Length &times; Width &times; Height (cm) &divide; 6,000 = Chargeable Volumetric Kg.</p>
+            <div style="background:#f1f5f9; padding: 0.75rem; border-radius:8px; margin-top:1rem; font-size:0.82rem; font-weight:600;">1 CBM = 167 kg</div>
+          </div>
+
+          <div class="cert-card">
+            <div class="badge-tech badge-tech-green" style="margin-bottom: 0.5rem;">Express Courier</div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a;">Standard Ratio: 1:5000</h3>
+            <p style="font-size: 0.88rem; color: #64748b; margin-top: 0.5rem;">Length &times; Width &times; Height (cm) &divide; 5,000 = Chargeable Volumetric Kg.</p>
+            <div style="background:#f1f5f9; padding: 0.75rem; border-radius:8px; margin-top:1rem; font-size:0.82rem; font-weight:600;">1 CBM = 200 kg</div>
+          </div>
+
+          <div class="cert-card">
+            <div class="badge-tech badge-tech-orange" style="margin-bottom: 0.5rem;">Ocean LCL</div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a;">Maritime Ratio: 1:1000</h3>
+            <p style="font-size: 0.88rem; color: #64748b; margin-top: 0.5rem;">Length &times; Width &times; Height (m) = Volume (CBM) billed per revenue ton (1,000 kg).</p>
+            <div style="background:#f1f5f9; padding: 0.75rem; border-radius:8px; margin-top:1rem; font-size:0.82rem; font-weight:600;">1 CBM = 1,000 kg (1 Ton)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: VOLUME REBATE & ENTERPRISE CONTRACT TIERS -->
+    <section class="section-py" aria-labelledby="rebate-heading">
+      <div class="container">
+        <div class="solutions-content-grid" style="align-items: center;">
+          <div>
+            <span class="badge badge-accent">Enterprise Pricing</span>
+            <h2 id="rebate-heading" class="section-title">Volume Spend Rebates & Contract Discounts</h2>
+            <p class="section-desc">Shippers moving recurring weekly lane volumes unlock negotiated base rates, fuel surcharge caps, and waived accessorial fees.</p>
+            <div class="cert-grid" style="grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem;">
+              <div style="background: #f8fafc; padding: 1.25rem; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 1.5rem; font-weight: 800; color: #0d9488;">Up to 22%</div>
+                <div style="font-weight: 600; color: #1e293b;">Enterprise Lane Rebate</div>
+                <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.25rem;">On monthly freight expenditures exceeding $50,000.</p>
+              </div>
+              <div style="background: #f8fafc; padding: 1.25rem; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 1.5rem; font-weight: 800; color: #0f172a;">30-Day</div>
+                <div style="font-weight: 600; color: #1e293b;">Rate Lock Guarantee</div>
+                <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.25rem;">Guaranteed capacity with locked spot surge protection.</p>
+              </div>
+            </div>
+            <div style="margin-top: 1.5rem;">
+              <a href="contact.html" class="btn btn-navy">Speak with Enterprise Account Executive &rarr;</a>
+            </div>
+          </div>
+
+          <div class="split-img-column">
+            <img src="assets/images/solution-intl.webp" alt="Supply chain logistics financial contract management" width="700" height="460">
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+
+  <!-- 3-PILL GRADIENT CTA SECTION (MATCHING SCREENSHOT) -->
+  <section class="final-cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-inner-card">
+        <h2 id="cta-heading" class="cta-tagline">
+          Join thousands of enterprise shippers and supply chain leaders streamlining freight with Stackly.
+        </h2>
+        <div class="cta-pill-group">
+          <a href="book-shipment.html" class="btn-pill-primary">Start Shipping Free</a>
+          <a href="shipping-quote.html" class="btn-pill-outline">Get Instant Quote</a>
+          <a href="tracking.html" class="btn-pill-outline">Live Tracking</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- 4-COLUMN ENTERPRISE FOOTER (MATCHING SCREENSHOT) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand & Socials -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Platform">
+            <img src="assets/images/logo-white.png" alt="Stackly" class="brand-logo-img" width="144" height="42">
+          </a>
+          <p class="footer-bio-text">
+            Delivering modern logistics, real-time freight visibility, automated dispatch intelligence, and certified temperature-controlled warehousing worldwide.
+          </p>
+          <div class="footer-social-row">
+            <a href="404.html" class="footer-social-pill" aria-label="LinkedIn">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-pill" aria-label="Twitter / X">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-pill" aria-label="Instagram">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-pill" aria-label="YouTube">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Stackly</a></li>
+            <li><a href="services.html">Freight Services</a></li>
+            <li><a href="tracking.html">Live Tracking</a></li>
+            <li><a href="fleet.html">Fleet Network</a></li>
+            <li><a href="shipping-quote.html">Instant Rate Quote</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="careers.html">Careers & Drivers</a></li>
+            <li><a href="faq.html">Help & FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Verticals -->
+        <div>
+          <h4 class="footer-col-title">Freight Verticals</h4>
+          <ul class="footer-links-list">
+            <li><a href="road-freight.html">Road Linehaul (FTL/LTL)</a></li>
+            <li><a href="air-freight.html">Air Freight Express</a></li>
+            <li><a href="ocean-freight.html">Ocean Container Shipping</a></li>
+            <li><a href="cold-chain.html">Cold Chain Logistics</a></li>
+            <li><a href="customs.html">Customs Brokerage</a></li>
+            <li><a href="warehouse.html">High-Bay Warehousing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Portals & Compliance -->
+        <div>
+          <h4 class="footer-col-title">Portals & Legal</h4>
+          <ul class="footer-links-list">
+            <li><a href="customer-dashboard.html">Shipper Portal</a></li>
+            <li><a href="driver-dashboard.html">Driver Telematics Hub</a></li>
+            <li><a href="admin-dashboard.html">Admin Command Tower</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy & Telematics Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>&copy; 2026 Stackly Logistics Platform Inc. All rights reserved. Sub-second GPS & Telematics Certified.</div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="404.html">Security</a>
+          <a href="contact.html">Dispatch</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

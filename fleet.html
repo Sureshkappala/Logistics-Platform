@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commercial Fleet Management | Stackly</title>
+  <meta name="description" content="Manage and monitor Stackly commercial vehicles, driver rosters, real-time telemetry, fuel efficiency, and maintenance diagnostics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- STICKY NAVBAR (MATCHING SCREENSHOT) -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Stackly Platform">
+        <img src="assets/images/logo.png" alt="Stackly" class="brand-logo-img" width="144" height="42">
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="tracking.html" class="nav-link">Tracking</a>
+        <a href="fleet.html" class="nav-link active">Fleet</a>
+        <a href="warehouse.html" class="nav-link">Warehousing</a>
+        <a href="shipping-quote.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login-link">Login</a>
+        <a href="book-shipment.html" class="btn-get-started">Get Started</a>
+        <button class="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- MOBILE NAVIGATION DRAWER (MATCHING USER SCREENSHOT) -->
+  <div class="mobile-nav-overlay" aria-hidden="true"></div>
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo.png" alt="Stackly" class="brand-logo-img" width="130" height="36">
+      </a>
+      <button class="drawer-close-btn" aria-label="Close menu">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+
+    <!-- Search bar in drawer -->
+    <div class="drawer-search-box">
+      <svg class="drawer-search-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      <input type="text" placeholder="Search tracking, services..." aria-label="Search site">
+    </div>
+
+    <ul class="drawer-menu-list">
+      <li class="drawer-menu-item"><a href="index.html"><span>Home</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="about.html"><span>About Us</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="services.html"><span>Freight Services</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="tracking.html"><span>Live Tracking</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="fleet.html" class="active"><span>Fleet Network</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="warehouse.html"><span>Warehousing</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="shipping-quote.html"><span>Rate Calculator</span> <span class="drawer-arrow">&rarr;</span></a></li>
+      <li class="drawer-menu-item"><a href="contact.html"><span>Contact Concierge</span> <span class="drawer-arrow">&rarr;</span></a></li>
+    </ul>
+
+        <!-- Action Buttons (Login & Get Started) -->
+    <div class="drawer-btn-group">
+      <a href="login.html" class="btn-drawer-outline">Login</a>
+      <a href="book-shipment.html" class="btn-drawer-accent">Get Started</a>
+    </div>
+
+    <!-- Direct Dispatch Access Contact Info Moved Downside -->
+    <div class="drawer-info-card">
+      <div class="drawer-info-tag">DIRECT DISPATCH ACCESS</div>
+      <div class="drawer-info-row">Call: <strong>+1 (800) 555-SAFE</strong></div>
+      <div class="drawer-info-row">Email: <strong>dispatch@stackly.com</strong></div>
+      <div class="drawer-info-row" style="margin-top:0.4rem; font-size:0.8rem; color:#64748b;">Hubs: Chicago &bull; Rotterdam &bull; Singapore &bull; Dubai</div>
+    </div>
+  </div>
+
+<main>
+    <!-- PAGE HERO -->
+    <section class="hero-section" style="padding: 3.5rem 0 4rem;">
+      <div class="container text-center" style="max-width: 840px; margin: 0 auto; text-align: center;">
+        <div class="section-tag section-tag-amber">Fleet Operations</div>
+        <h1 class="hero-title" style="font-size: 2.85rem; margin-bottom: 1rem;">Fleet Telematics & Vehicle Roster</h1>
+        <p class="hero-text" style="margin: 0 auto 1.5rem;">
+          Real-time visibility into over 500 heavy commercial trucks, medium-duty logistics vans, and specialized refrigerated trailers.
+        </p>
+      </div>
+    </section>
+
+    <!-- FLEET METRIC STRIP -->
+    <section class="stats-strip" style="padding: 2rem 0;">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8h4l3 3v5a1 1 0 01-1 1h-1"></path></svg>
+            </div>
+            <div>
+              <div class="stat-number">524</div>
+              <div class="stat-label">Total Fleet Units</div>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon amber">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <div>
+              <div class="stat-number">388</div>
+              <div class="stat-label">Active on Road</div>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <div>
+              <div class="stat-number">112</div>
+              <div class="stat-label">Ready at Depot</div>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon amber">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            </div>
+            <div>
+              <div class="stat-number">24</div>
+              <div class="stat-label">Scheduled Maintenance</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLEET FILTER & GRID SECTION -->
+    <section class="section-py" style="background-color: var(--gray-50);">
+      <div class="container">
+        
+        <!-- Controls Bar -->
+        <div style="background-color: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--border-color); padding: 1.5rem; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1.25rem;">
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+            <div class="fleet-filter-btns">
+              <button class="fleet-filter-btn filter-btn active" data-filter="all">All Types</button>
+              <button class="fleet-filter-btn filter-btn" data-filter="truck">Heavy Trucks</button>
+              <button class="fleet-filter-btn filter-btn" data-filter="van">Delivery Vans</button>
+              <button class="fleet-filter-btn filter-btn" data-filter="trailer">Refrigerated Trailers</button>
+            </div>
+            <div style="font-size: 0.875rem; color: var(--gray-500); font-weight: 600;" id="fleetResultCount">
+              6 vehicles displayed
+            </div>
+          </div>
+
+          <!-- Secondary Filters: Search, Status, Location -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) auto; gap: 1rem; align-items: center;">
+            <input type="text" id="fleetSearchInput" class="form-control" placeholder="Search by Vehicle ID or Driver..." aria-label="Search fleet">
+            
+            <select id="fleetStatusFilter" class="form-control" aria-label="Filter by Status">
+              <option value="all">All Statuses</option>
+              <option value="available">Available</option>
+              <option value="in transit">In Transit</option>
+              <option value="delivering">Delivering</option>
+              <option value="maintenance">Maintenance</option>
+            </select>
+
+            <select id="fleetLocationFilter" class="form-control" aria-label="Filter by Location Hub">
+              <option value="all">All Regional Hubs</option>
+              <option value="northwest">Northwest (Seattle / Portland)</option>
+              <option value="midwest">Midwest (Chicago / Denver)</option>
+              <option value="south">South (Dallas / Austin)</option>
+              <option value="east">East Coast (Atlanta / Miami)</option>
+            </select>
+
+            <button id="clearFleetFiltersBtn" class="btn btn-outline btn-sm">Clear Filters</button>
+          </div>
+        </div>
+
+        <!-- Vehicle Grid -->
+        <div class="fleet-grid">
+          <!-- Card 1 -->
+          <div class="fleet-card fleet-card-item" data-type="truck" data-status="in transit" data-location="northwest">
+            <div class="fleet-card-header">
+              <div>
+                <div class="vehicle-id">LP-TRK-402</div>
+                <div class="vehicle-type-tag">Volvo FH16 (540 HP)</div>
+              </div>
+              <span class="badge badge-blue">In Transit</span>
+            </div>
+            <div class="fleet-data-row"><span class="fleet-label">Driver:</span><span class="fleet-val">Marcus Reed</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Location:</span><span class="fleet-val">Northwest &bull; Bozeman Hub, MT</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Assigned Route:</span><span class="fleet-val">Seattle &rarr; Chicago</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Telemetry:</span><span class="fleet-val">68 mph &bull; Engine 88&deg;C</span></div>
+            <div class="fleet-progress-bar-wrap">
+              <div class="fleet-progress-label"><span>Trip Completion</span><strong>65%</strong></div>
+              <div class="progress-track"><div class="progress-fill" style="width: 65%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="fleet-card fleet-card-item" data-type="van" data-status="delivering" data-location="south">
+            <div class="fleet-card-header">
+              <div>
+                <div class="vehicle-id">LP-VAN-118</div>
+                <div class="vehicle-type-tag">Mercedes Sprinter 316</div>
+              </div>
+              <span class="badge badge-amber">Delivering</span>
+            </div>
+            <div class="fleet-data-row"><span class="fleet-label">Driver:</span><span class="fleet-val">Elena Gomez</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Location:</span><span class="fleet-val">South &bull; Austin Metro, TX</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Assigned Route:</span><span class="fleet-val">Dallas &rarr; Austin</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Remaining Stops:</span><span class="fleet-val">4 of 28 Stops</span></div>
+            <div class="fleet-progress-bar-wrap">
+              <div class="fleet-progress-label"><span>Daily Route</span><strong>86%</strong></div>
+              <div class="progress-track"><div class="progress-fill amber" style="width: 86%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="fleet-card fleet-card-item" data-type="trailer" data-status="available" data-location="midwest">
+            <div class="fleet-card-header">
+              <div>
+                <div class="vehicle-id">LP-TRK-709</div>
+                <div class="vehicle-type-tag">Scania R500 (Cold-Chain Reefer)</div>
+              </div>
+              <span class="badge badge-green">Available</span>
+            </div>
+            <div class="fleet-data-row"><span class="fleet-label">Driver:</span><span class="fleet-val">Standby Roster (J. Baker)</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Location:</span><span class="fleet-val">Midwest &bull; Denver Depot</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Reefer Temp:</span><span class="fleet-val">-18.4&deg;C (Pre-cooled)</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Fuel & Charge:</span><span class="fleet-val">98% Fuel &bull; Cleared</span></div>
+            <div class="fleet-progress-bar-wrap">
+              <div class="fleet-progress-label"><span>Readiness Check</span><strong>100% Ready</strong></div>
+              <div class="progress-track"><div class="progress-fill green" style="width: 100%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="fleet-card fleet-card-item" data-type="truck" data-status="available" data-location="east">
+            <div class="fleet-card-header">
+              <div>
+                <div class="vehicle-id">LP-TRK-890</div>
+                <div class="vehicle-type-tag">Freightliner Cascadia</div>
+              </div>
+              <span class="badge badge-green">Available</span>
+            </div>
+            <div class="fleet-data-row"><span class="fleet-label">Driver:</span><span class="fleet-val">David Ross</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Location:</span><span class="fleet-val">East &bull; Miami Seaport Yard</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Last Mission:</span><span class="fleet-val">Atlanta &rarr; Miami (Completed)</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Odometer:</span><span class="fleet-val">124,500 km</span></div>
+            <div class="fleet-progress-bar-wrap">
+              <div class="fleet-progress-label"><span>Inspection Status</span><strong>Cleared</strong></div>
+              <div class="progress-track"><div class="progress-fill green" style="width: 100%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="fleet-card fleet-card-item" data-type="van" data-status="maintenance" data-location="midwest">
+            <div class="fleet-card-header">
+              <div>
+                <div class="vehicle-id">LP-VAN-304</div>
+                <div class="vehicle-type-tag">Ford E-Transit (Electric)</div>
+              </div>
+              <span class="badge badge-red">Maintenance</span>
+            </div>
+            <div class="fleet-data-row"><span class="fleet-label">Driver:</span><span class="fleet-val">Service Technician (A. Diaz)</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Location:</span><span class="fleet-val">Midwest &bull; Chicago Service Bay 2</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Service Type:</span><span class="fleet-val">Brake Pad & Sensor Recalibration</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Estimated Ready:</span><span class="fleet-val">Tomorrow, 09:00 AM</span></div>
+            <div class="fleet-progress-bar-wrap">
+              <div class="fleet-progress-label"><span>Service Progress</span><strong>50%</strong></div>
+              <div class="progress-track"><div class="progress-fill red" style="width: 50%; background-color: var(--red-500);"></div></div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="fleet-card fleet-card-item" data-type="trailer" data-status="in transit" data-location="east">
+            <div class="fleet-card-header">
+              <div>
+                <div class="vehicle-id">LP-TRL-552</div>
+                <div class="vehicle-type-tag">Krone 53ft High-Cube Trailer</div>
+              </div>
+              <span class="badge badge-blue">In Transit</span>
+            </div>
+            <div class="fleet-data-row"><span class="fleet-label">Tractor Unit:</span><span class="fleet-val">LP-TRK-610 (T. Scott)</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Location:</span><span class="fleet-val">East &bull; I-95 Southbound</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">Payload:</span><span class="fleet-val">22 Pallets Electronics</span></div>
+            <div class="fleet-data-row"><span class="fleet-label">ETA:</span><span class="fleet-val">Today, 21:15 EST</span></div>
+            <div class="fleet-progress-bar-wrap">
+              <div class="fleet-progress-label"><span>Trip Completion</span><strong>78%</strong></div>
+              <div class="progress-track"><div class="progress-fill" style="width: 78%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- SECTION 1: REAL-TIME FLEET TELEMATICS DASHBOARD -->
+    <section class="section-py bg-light" aria-labelledby="fleet-status-heading">
+      <div class="container">
+        <div class="text-center" style="max-width: 720px; margin: 0 auto 2.5rem;">
+          <span class="badge badge-primary">Live Operations</span>
+          <h2 id="fleet-status-heading" class="section-title">Real-Time Fleet Deployment Board</h2>
+          <p class="section-subtitle">Active distribution of transport assets currently mobilized across global shipping lanes.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value" style="color: #0d9488;">1,420</div>
+            <div class="stat-label">Active Power Units in Transit</div>
+            <p style="font-size: 0.82rem; color: #64748b; margin-top: 0.35rem;">Live GPS telematics active</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" style="color: #0284c7;">315</div>
+            <div class="stat-label">Docked at Regional Cross-Docks</div>
+            <p style="font-size: 0.82rem; color: #64748b; margin-top: 0.35rem;">High-velocity load/unload</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" style="color: #16a34a;">99.8%</div>
+            <div class="stat-label">DOT Safety & Compliance Score</div>
+            <p style="font-size: 0.82rem; color: #64748b; margin-top: 0.35rem;">Zero safety out-of-service orders</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" style="color: #c2410c;">12 Min</div>
+            <div class="stat-label">Average Rapid Dispatch Response</div>
+            <p style="font-size: 0.82rem; color: #64748b; margin-top: 0.35rem;">Automated carrier match</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: 100-POINT SAFETY & DRIVER TELEMATICS INSPECTION -->
+    <section class="section-py" aria-labelledby="safety-heading">
+      <div class="container">
+        <div class="solutions-content-grid" style="align-items: center;">
+          <div>
+            <span class="badge badge-accent">Rigorous Standards</span>
+            <h2 id="safety-heading" class="section-title">100-Point Pre-Trip Telematics & Safety Inspections</h2>
+            <p class="section-desc">Every tractor, trailer, refrigerated unit, and maritime container undergoes strict digital pre-trip safety auditing before departure.</p>
+            <div class="cert-grid" style="grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem;">
+              <div style="background: #f8fafc; padding: 1.25rem; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-weight: 700; color: #0f172a; margin-bottom: 0.25rem;">AI Fatigue Tracking</div>
+                <p style="font-size: 0.85rem; color: #64748b;">In-cab telematics prevent driver drowsiness and ensure legal HOS compliance.</p>
+              </div>
+              <div style="background: #f8fafc; padding: 1.25rem; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-weight: 700; color: #0f172a; margin-bottom: 0.25rem;">Smart Tire Sensors</div>
+                <p style="font-size: 0.85rem; color: #64748b;">Automated TPMS tire pressure monitoring reduces blowout risk by 94%.</p>
+              </div>
+            </div>
+            <div style="margin-top: 1.5rem;">
+              <a href="book-shipment.html" class="btn btn-navy">Dispatch a Certified Vehicle &rarr;</a>
+            </div>
+          </div>
+
+          <div class="split-img-column">
+            <img src="assets/images/service-fleet.webp" alt="Driver inspecting modern logistics freight vehicle" width="700" height="460">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PALLET & CONTAINER CAPACITY GUIDE -->
+    <section class="section-py bg-light" aria-labelledby="capacity-heading">
+      <div class="container">
+        <div class="text-center" style="max-width: 680px; margin: 0 auto 2.5rem;">
+          <span class="badge badge-primary">Cargo Fit Guide</span>
+          <h2 id="capacity-heading" class="section-title">Trailer & Container Pallet Fit Matrix</h2>
+          <p class="section-subtitle">Reference capacity specifications for standard 48x40 inch GMA pallets and international EUR-pallets.</p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="sla-table">
+            <thead>
+              <tr>
+                <th>Vehicle / Container</th>
+                <th>Max Standard Pallets</th>
+                <th>Max Payload Weight</th>
+                <th>Internal Cubic Volume</th>
+                <th>Ideal Cargo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>53ft Dry Freight Van</strong></td>
+                <td>26 – 30 Pallets (Single / Double)</td>
+                <td>45,000 lbs (20,411 kg)</td>
+                <td>3,850 cu. ft. (109 CBM)</td>
+                <td>Retail FMCG, Industrial Dry Goods</td>
+              </tr>
+              <tr>
+                <td><strong>53ft Temperature-Controlled Reefer</strong></td>
+                <td>24 – 26 Pallets</td>
+                <td>43,500 lbs (19,731 kg)</td>
+                <td>3,550 cu. ft. (100 CBM)</td>
+                <td>Produce, Dairy, Frozen Foods, Pharma</td>
+              </tr>
+              <tr>
+                <td><strong>40ft High-Cube Ocean Container</strong></td>
+                <td>20 – 21 Standard GMA Pallets</td>
+                <td>58,500 lbs (26,535 kg)</td>
+                <td>2,694 cu. ft. (76.3 CBM)</td>
+                <td>Global Imports, Heavy Machinery</td>
+              </tr>
+              <tr>
+                <td><strong>Sprinter / Straight Truck (Expedited)</strong></td>
+                <td>6 – 12 Pallets</td>
+                <td>12,000 lbs (5,443 kg)</td>
+                <td>1,100 cu. ft. (31 CBM)</td>
+                <td>Same-Day Urban Direct Delivery</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+</main>
+
+  <!-- 3-PILL GRADIENT CTA SECTION (MATCHING SCREENSHOT) -->
+  <section class="final-cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-inner-card">
+        <h2 id="cta-heading" class="cta-tagline">
+          Join thousands of enterprise shippers and supply chain leaders streamlining freight with Stackly.
+        </h2>
+        <div class="cta-pill-group">
+          <a href="book-shipment.html" class="btn-pill-primary">Start Shipping Free</a>
+          <a href="shipping-quote.html" class="btn-pill-outline">Get Instant Quote</a>
+          <a href="tracking.html" class="btn-pill-outline">Live Tracking</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- 4-COLUMN ENTERPRISE FOOTER (MATCHING SCREENSHOT) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand & Socials -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Platform">
+            <img src="assets/images/logo-white.png" alt="Stackly" class="brand-logo-img" width="144" height="42">
+          </a>
+          <p class="footer-bio-text">
+            Delivering modern logistics, real-time freight visibility, automated dispatch intelligence, and certified temperature-controlled warehousing worldwide.
+          </p>
+          <div class="footer-social-row">
+            <a href="404.html" class="footer-social-pill" aria-label="LinkedIn">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-pill" aria-label="Twitter / X">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-pill" aria-label="Instagram">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-pill" aria-label="YouTube">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Stackly</a></li>
+            <li><a href="services.html">Freight Services</a></li>
+            <li><a href="tracking.html">Live Tracking</a></li>
+            <li><a href="fleet.html">Fleet Network</a></li>
+            <li><a href="shipping-quote.html">Instant Rate Quote</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+            <li><a href="careers.html">Careers & Drivers</a></li>
+            <li><a href="faq.html">Help & FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Verticals -->
+        <div>
+          <h4 class="footer-col-title">Freight Verticals</h4>
+          <ul class="footer-links-list">
+            <li><a href="road-freight.html">Road Linehaul (FTL/LTL)</a></li>
+            <li><a href="air-freight.html">Air Freight Express</a></li>
+            <li><a href="ocean-freight.html">Ocean Container Shipping</a></li>
+            <li><a href="cold-chain.html">Cold Chain Logistics</a></li>
+            <li><a href="customs.html">Customs Brokerage</a></li>
+            <li><a href="warehouse.html">High-Bay Warehousing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Portals & Compliance -->
+        <div>
+          <h4 class="footer-col-title">Portals & Legal</h4>
+          <ul class="footer-links-list">
+            <li><a href="customer-dashboard.html">Shipper Portal</a></li>
+            <li><a href="driver-dashboard.html">Driver Telematics Hub</a></li>
+            <li><a href="admin-dashboard.html">Admin Command Tower</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy & Telematics Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>&copy; 2026 Stackly Logistics Platform Inc. All rights reserved. Sub-second GPS & Telematics Certified.</div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="404.html">Security</a>
+          <a href="contact.html">Dispatch</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Logistics Dashboard | Stackly</title>
+  <meta name="description" content="Manage your active shipments, book new pickups, view delivery history, and track cargo in real time.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- DASHBOARD LAYOUT -->
+  <div class="dashboard-layout">
+                <!-- DASHBOARD SIDEBAR -->
+        <!-- DASHBOARD SIDEBAR -->
+    <aside class="dashboard-sidebar" aria-label="Customer Navigation">
+      <div class="sidebar-brand" style="padding: 1.25rem 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: space-between;">
+        <a href="customer-dashboard.html" aria-label="Stackly Homepage">
+          <img src="assets/images/logo-white.png" alt="Stackly" width="130" height="38" style="display: block;">
+        </a>
+        <button type="button" class="sidebar-close-btn" aria-label="Close Navigation Drawer">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <div class="sidebar-profile">
+        <img src="assets/images/avatar-1.webp" alt="Sarah Jenkins" class="profile-avatar">
+        <div>
+          <div class="profile-name">Sarah Jenkins</div>
+          <div class="profile-badge">Shipper &bull; NexaCorp</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-menu">
+        <a href="customer-dashboard.html" class="sidebar-menu-link active"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>Dashboard</a>
+        <a href="my-shipments.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>My Shipments</a>
+        <a href="customer-track.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>Track Shipment</a>
+        <a href="customer-book.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Book Shipment</a>
+        <a href="delivery-history.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Delivery History</a>
+        <a href="saved-addresses.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>Saved Addresses</a>
+        <a href="notifications.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>Notifications</a>
+        <a href="settings.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>Settings</a>
+        <a href="login.html?logout=true" class="sidebar-menu-link sidebar-logout-btn" style="margin-top: auto; color: #fca5a5;">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+          Logout
+        </a>
+      </nav>
+    </aside>
+    <main class="dashboard-content-area">
+      <div class="dashboard-topbar">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <button class="dash-mobile-toggle" aria-label="Toggle Navigation">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <span>Menu</span>
+          </button>
+          <div>
+            <h1 class="dash-heading">Shipper Overview</h1>
+            <p class="dash-sub">Account: <strong>NexaCorp Global (ID: NC-88410)</strong> &bull; Priority Enterprise Tier</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.75rem;">
+          <a href="shipping-quote.html" class="btn btn-outline btn-sm">Rate Calculator</a>
+          <a href="customer-book.html" class="btn btn-accent btn-sm">+ Book New Shipment</a>
+        </div>
+      </div>
+
+      <!-- KPI METRIC CARDS -->
+      <div class="dash-metrics-row">
+        <div class="dash-stat-card">
+          <div class="dash-stat-top">
+            <span class="dash-stat-lbl">Active Shipments</span>
+            <div class="dash-stat-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+          </div>
+          <div class="dash-stat-num">4</div>
+          <div style="font-size: 0.8rem; color: var(--blue-600); font-weight: 600;">2 In Transit &bull; 2 Out for Delivery</div>
+        </div>
+
+        <div class="dash-stat-card">
+          <div class="dash-stat-top">
+            <span class="dash-stat-lbl">Completed / Delivered</span>
+            <div class="dash-stat-icon green">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+          </div>
+          <div class="dash-stat-num">128</div>
+          <div style="font-size: 0.8rem; color: var(--emerald-500); font-weight: 600;">99.2% On-Time Index</div>
+        </div>
+
+        <div class="dash-stat-card">
+          <div class="dash-stat-top">
+            <span class="dash-stat-lbl">Pending Pickup</span>
+            <div class="dash-stat-icon amber">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+          </div>
+          <div class="dash-stat-num">2</div>
+          <div style="font-size: 0.8rem; color: var(--amber-600); font-weight: 600;">Dock assigned for 16:00</div>
+        </div>
+
+        <div class="dash-stat-card">
+          <div class="dash-stat-top">
+            <span class="dash-stat-lbl">Cancelled / Exceptions</span>
+            <div class="dash-stat-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </div>
+          </div>
+          <div class="dash-stat-num">0</div>
+          <div style="font-size: 0.8rem; color: var(--gray-500); font-weight: 600;">No route exceptions</div>
+        </div>
+      </div>
+
+      <!-- ACTIVE TELEMETRY CARD (MINI TRACKER) -->
+      <div class="dash-card" style="border-left: 4px solid var(--blue-600);">
+        <div class="dash-card-header">
+          <div>
+            <span class="section-tag section-tag-amber" style="margin-bottom: 0.25rem;">Live Active Linehaul</span>
+            <h3 class="dash-card-title">Shipment LP10001 &mdash; Interstate Heavy Freight</h3>
+          </div>
+          <a href="tracking.html?id=LP10001" class="btn btn-primary btn-sm">Full Telemetry &rarr;</a>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; font-size: 0.875rem;">
+          <div><span style="color: var(--gray-500);">Origin:</span><br><strong>Seattle Terminal, WA</strong></div>
+          <div><span style="color: var(--gray-500);">Destination:</span><br><strong>Chicago Central, IL</strong></div>
+          <div><span style="color: var(--gray-500);">Current Location:</span><br><strong style="color: var(--blue-600);">Bozeman Hub, MT (68 mph)</strong></div>
+          <div><span style="color: var(--gray-500);">ETA:</span><br><strong style="color: var(--amber-600);">Today, 18:30 CST</strong></div>
+        </div>
+
+        <div class="progress-track" style="height: 8px;">
+          <div class="progress-fill" style="width: 65%;"></div>
+        </div>
+      </div>
+
+      <!-- RECENT SHIPMENTS DATA TABLE -->
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h3 class="dash-card-title">Recent Enterprise Shipments</h3>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" class="form-control" style="width: 220px; padding: 0.4rem 0.75rem; font-size: 0.85rem;" placeholder="Search Reference ID..." onkeyup="
+              const val = this.value.toLowerCase();
+              document.querySelectorAll('#customerTableBody tr').forEach(row => {
+                row.style.display = row.textContent.toLowerCase().includes(val) ? '' : 'none';
+              });
+            ">
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Tracking ID</th>
+                <th>Destination</th>
+                <th>Cargo Details</th>
+                <th>Carrier / Driver</th>
+                <th>Dispatch Date</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="customerTableBody">
+              <tr>
+                <td><strong>LP10001</strong></td>
+                <td>Chicago Central Terminal, IL</td>
+                <td>1,450 kg &bull; Palletized Tech</td>
+                <td>LP-TRK-402 (M. Reed)</td>
+                <td>Sep 22, 2026</td>
+                <td><span class="badge badge-blue">In Transit</span></td>
+                <td><a href="tracking.html?id=LP10001" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.65rem;">Track</a></td>
+              </tr>
+              <tr>
+                <td><strong>LP10002</strong></td>
+                <td>Austin Commercial Hub, TX</td>
+                <td>85 kg &bull; 3 Express Boxes</td>
+                <td>LP-VAN-118 (E. Gomez)</td>
+                <td>Sep 24, 2026</td>
+                <td><span class="badge badge-amber">Out for Delivery</span></td>
+                <td><a href="tracking.html?id=LP10002" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.65rem;">Track</a></td>
+              </tr>
+              <tr>
+                <td><strong>LP10003</strong></td>
+                <td>Miami Seaport Logistics, FL</td>
+                <td>3,200 kg &bull; Reefer Cold-Chain</td>
+                <td>LP-TRK-890 (D. Ross)</td>
+                <td>Sep 21, 2026</td>
+                <td><span class="badge badge-green">Delivered</span></td>
+                <td><a href="tracking.html?id=LP10003" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.65rem;">View e-POD</a></td>
+              </tr>
+              <tr>
+                <td><strong>LP10098</strong></td>
+                <td>Denver Distribution Center, CO</td>
+                <td>620 kg &bull; Standard Freight</td>
+                <td>LP-TRK-709 (J. Baker)</td>
+                <td>Sep 19, 2026</td>
+                <td><span class="badge badge-green">Delivered</span></td>
+                <td><a href="tracking.html?id=LP10003" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.65rem;">View e-POD</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    
+      <!-- GRID OF 2 WIDGETS: SPEND ANALYTICS & WAREHOUSE PALLETS -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+        <!-- WIDGET 1: MONTHLY SPEND & METRIC TONNAGE -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <div>
+              <h3 class="dash-card-title">Freight Spend & Volume Trends</h3>
+              <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0.2rem 0 0;">Monthly billing & tonnage across all linehauls</p>
+            </div>
+            <span style="font-size: 0.75rem; background: var(--emerald-50); color: var(--emerald-500); font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 4px;">-8.4% Cost / Ton</span>
+          </div>
+          <div style="height: 220px;">
+            <canvas id="volumeChart" width="500" height="220" style="width: 100%; height: 100%; display: block;"></canvas>
+          </div>
+        </div>
+
+        <!-- WIDGET 2: WAREHOUSE STORAGE & INVENTORY GAUGE -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <div>
+              <h3 class="dash-card-title">Dedicated Warehouse Storage</h3>
+              <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0.2rem 0 0;">Contracted pallet slots across regional high-bays</p>
+            </div>
+            <a href="warehouse.html" class="btn btn-outline btn-sm">Manage Slots</a>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 0.35rem;">
+                <strong style="color: var(--navy-900);">Chicago Rail Hub (High-Bay C)</strong>
+                <span style="color: var(--blue-600); font-weight: 700;">420 / 500 Pallets (84%)</span>
+              </div>
+              <div class="progress-track" style="height: 7px;">
+                <div class="progress-fill" style="width: 84%; background: var(--blue-600);"></div>
+              </div>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 0.35rem;">
+                <strong style="color: var(--navy-900);">Dallas Cross-Dock Terminal</strong>
+                <span style="color: var(--emerald-500); font-weight: 700;">180 / 300 Pallets (60%)</span>
+              </div>
+              <div class="progress-track" style="height: 7px;">
+                <div class="progress-fill" style="width: 60%; background: var(--emerald-500);"></div>
+              </div>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 0.35rem;">
+                <strong style="color: var(--navy-900);">Rotterdam Maritime Cold Vault (-20°C)</strong>
+                <span style="color: var(--amber-600); font-weight: 700;">92 / 100 Pallets (92%)</span>
+              </div>
+              <div class="progress-track" style="height: 7px;">
+                <div class="progress-fill" style="width: 92%; background: var(--amber-500);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRID OF 2 SECTIONS: QUICK BOOKING CALCULATOR & CONCIERGE DISPATCHER -->
+      <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+        <!-- QUICK QUOTE / DISPATCH WIDGET -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Express Rate Estimator & Booking</h3>
+            <span style="font-size: 0.75rem; background: var(--blue-50); color: var(--blue-600); font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px;">INSTANT DISPATCH</span>
+          </div>
+          <form onsubmit="event.preventDefault(); showToast('Express dispatch quote generated! Redirecting to booking confirmation...', 'success'); setTimeout(() => window.location.href='book-shipment.html', 1200);">
+            <div class="form-row-2col" style="margin-bottom: 1rem;">
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label">Pickup Hub</label>
+                <select class="form-control" style="padding: 0.5rem 0.75rem;">
+                  <option>Seattle Global Gateway, WA</option>
+                  <option selected>Chicago Rail & FTL Hub, IL</option>
+                  <option>Dallas Gateway Terminal, TX</option>
+                  <option>Rotterdam Maritime Port, NL</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label">Delivery Destination</label>
+                <select class="form-control" style="padding: 0.5rem 0.75rem;">
+                  <option selected>Dallas Gateway Terminal, TX</option>
+                  <option>Chicago Rail & FTL Hub, IL</option>
+                  <option>Austin Commercial Hub, TX</option>
+                  <option>Frankfurt Logistics Hub, DE</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row-2col" style="margin-bottom: 1.25rem;">
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label">Freight Service Tier</label>
+                <select class="form-control" style="padding: 0.5rem 0.75rem;">
+                  <option>Dedicated 53ft Dry Van (FTL)</option>
+                  <option>Refrigerated Cold-Chain (+2°C to +8°C)</option>
+                  <option>Consolidated LTL Palletized</option>
+                  <option>Next-Flight-Out Priority Air</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label">Cargo Weight (kg)</label>
+                <input type="number" class="form-control" value="4500" style="padding: 0.5rem 0.75rem;">
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; background: var(--gray-50); padding: 0.85rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem;">
+              <div>
+                <span style="font-size: 0.8rem; color: var(--gray-500);">Estimated Cost:</span>
+                <div style="font-size: 1.35rem; font-weight: 800; color: var(--navy-900);">$1,620.00</div>
+              </div>
+              <div>
+                <span style="font-size: 0.8rem; color: var(--gray-500);">Transit Window:</span>
+                <div style="font-size: 0.95rem; font-weight: 700; color: var(--blue-600);">Next-Day (24 hrs)</div>
+              </div>
+              <button type="submit" class="btn btn-accent btn-sm">Book This Load &rarr;</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- CONCIERGE ACCOUNT MANAGER -->
+        <div class="dash-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="dash-card-header" style="margin-bottom: 1rem;">
+              <h3 class="dash-card-title">Dedicated Dispatch Concierge</h3>
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--emerald-500); display: inline-block;" title="Online Now"></span>
+            </div>
+            <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+              <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--blue-600); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">
+                MC
+              </div>
+              <div>
+                <div style="font-weight: 700; color: var(--navy-900); font-size: 1rem;">Marcus Chen</div>
+                <div style="font-size: 0.8rem; color: var(--gray-500);">Senior Logistics Account Director</div>
+                <div style="font-size: 0.75rem; color: var(--emerald-500); font-weight: 600; margin-top: 0.15rem;">● Available for Emergency Re-routing</div>
+              </div>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--gray-600); line-height: 1.6; margin-bottom: 1rem;">
+              Direct Dispatch Phone: <strong>+1 (800) 555-LOGI (Ext 401)</strong><br>
+              Direct Email: <strong>marcus.chen@stackly.com</strong>
+            </p>
+          </div>
+          <button class="btn btn-outline btn-block btn-sm" onclick="showToast('Direct callback requested! Marcus will call within 5 minutes.', 'success')">Request Immediate Callback</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

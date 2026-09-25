@@ -1,0 +1,11 @@
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Scratch & Cache
+scratch/
+__pycache__/
+*.pyc
+*.log

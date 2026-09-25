@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assigned Deliveries & Stops | Driver Console | Stackly</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- DRIVER SIDEBAR -->
+    <aside class="dashboard-sidebar" aria-label="Driver Navigation">
+      <div class="sidebar-brand" style="padding: 1.25rem 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: space-between;">
+        <a href="driver-dashboard.html" aria-label="Stackly Homepage">
+          <img src="assets/images/logo-white.png" alt="Stackly" width="130" height="38" style="display: block;">
+        </a>
+        <button type="button" class="sidebar-close-btn" aria-label="Close Navigation Drawer">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <div class="sidebar-profile">
+        <img src="assets/images/driver-avatar.webp" alt="Elena Gomez" class="profile-avatar">
+        <div>
+          <div class="profile-name">Elena Gomez</div>
+          <div class="profile-badge">Lead Fleet Specialist &bull; LP-VAN-118</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-menu">
+        <a href="driver-dashboard.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>Dashboard</a>
+        <a href="driver-deliveries.html" class="sidebar-menu-link active"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>Assigned Deliveries</a>
+        <a href="driver-routes.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>Live Navigation</a>
+        <a href="driver-docking.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l3-3m-3 3L9 8m-5 5h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293h3.172a1 1 0 00.707-.293l2.414-2.414a1 1 0 01.707-.293H20"></path></svg>Pickups & Docking</a>
+        <a href="driver-diagnostics.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8h4l3 3v5a1 1 0 01-1 1h-1"></path></svg>Vehicle Diagnostics</a>
+        <a href="driver-earnings.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Earnings & Logs</a>
+        <a href="driver-alerts.html" class="sidebar-menu-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>Dispatch Alerts</a>
+        <a href="login.html?logout=true" class="sidebar-menu-link" style="margin-top: auto; color: #fca5a5;" class="sidebar-menu-link sidebar-logout-btn">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+          Clock Out / Logout
+        </a>
+      </nav>
+    </aside>
+    <main class="dashboard-content-area">
+      <div class="dashboard-topbar">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <button class="dash-mobile-toggle" aria-label="Toggle Navigation">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <span>Menu</span>
+          </button>
+          <div>
+            <h1 class="dash-heading">Today's Stop Manifest</h1>
+            <p class="dash-sub">Assigned Unit: <strong>Mercedes Sprinter (LP-VAN-118)</strong> &bull; Austin Metro Zone</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.75rem;">
+          <button class="btn btn-primary btn-sm" onclick="showToast('Camera scanner initiated for electronic POD signature.', 'info')">Scan Barcode / e-POD</button>
+        </div>
+      </div>
+
+      <!-- KPI METRIC CARDS -->
+      <div class="dash-metrics-row">
+        <div class="dash-stat-card">
+          <div class="dash-stat-lbl">Today's Total Stops</div>
+          <div class="dash-stat-num">28</div>
+          <div style="font-size: 0.8rem; color: var(--gray-600);">Scheduled for 8-hr Shift</div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="dash-stat-lbl">Completed Stops</div>
+          <div class="dash-stat-num" style="color: var(--emerald-500);">24</div>
+          <div style="font-size: 0.8rem; color: var(--emerald-500); font-weight: 600;">85.7% Shift Progress</div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="dash-stat-lbl">Stops Remaining</div>
+          <div class="dash-stat-num" style="color: var(--amber-600);">4</div>
+          <div style="font-size: 0.8rem; color: var(--amber-600); font-weight: 600;">~45 mins remaining</div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="dash-stat-lbl">Total Cargo Weight</div>
+          <div class="dash-stat-num">1,850 kg</div>
+          <div style="font-size: 0.8rem; color: var(--blue-600); font-weight: 600;">Payload Capacity: 52%</div>
+        </div>
+      </div>
+
+      <!-- ACTIVE STOP IN PROGRESS CARD -->
+      <div class="dash-card" style="border-left: 4px solid var(--amber-500); margin-bottom: 2rem;">
+        <div class="dash-card-header">
+          <div>
+            <span class="section-tag section-tag-amber" style="margin-bottom: 0.25rem;">Active Stop In Progress</span>
+            <h3 class="dash-card-title">Stop #25 &mdash; Consignee: Apex Retail Tech Hub</h3>
+          </div>
+          <button class="btn btn-accent btn-sm" onclick="showToast('Stop #25 confirmed delivered with electronic signature!', 'success')">Scan e-POD / Complete Stop</button>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; font-size: 0.875rem; margin-bottom: 1.25rem;">
+          <div><span style="color: var(--gray-500);">Package Reference:</span><br><strong>LP10002 (3 parcels, 85 kg)</strong></div>
+          <div><span style="color: var(--gray-500);">Delivery Address:</span><br><strong>420 Congress Ave, Suite 1200</strong></div>
+          <div><span style="color: var(--gray-500);">Contact Person:</span><br><strong>David Miller (+1 512 555-0199)</strong></div>
+          <div><span style="color: var(--gray-500);">Special Instructions:</span><br><strong style="color: var(--amber-600);">Freight elevator on side dock B</strong></div>
+        </div>
+      </div>
+
+      <!-- FULL MANIFEST TABLE -->
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h3 class="dash-card-title">Full Shift Route Manifest</h3>
+          <input type="text" placeholder="Search stop, tracking or address..." style="padding: 0.4rem 0.75rem; border: 1.5px solid var(--border-color); border-radius: 6px; font-size: 0.85rem; outline: none;">
+        </div>
+        <div class="table-responsive">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Stop #</th>
+                <th>Tracking ID</th>
+                <th>Destination / Consignee</th>
+                <th>Cargo Details</th>
+                <th>Scheduled Window</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background: var(--amber-50);">
+                <td><strong>#25 (Current)</strong></td>
+                <td>LP10002</td>
+                <td>Apex Retail Tech Hub<br><span style="font-size:0.8rem; color:var(--gray-600);">420 Congress Ave, Suite 1200</span></td>
+                <td>3 Parcels (85 kg)</td>
+                <td>14:00 - 14:30</td>
+                <td><span class="status-pill status-in-transit">Arriving</span></td>
+                <td><a href="driver-routes.html" class="btn btn-primary btn-sm">Navigate</a></td>
+              </tr>
+              <tr>
+                <td><strong>#26</strong></td>
+                <td>LP10003</td>
+                <td>Capital Medical Clinic<br><span style="font-size:0.8rem; color:var(--gray-600);">1200 Guadalupe St</span></td>
+                <td>1 Cold Bag (12 kg)</td>
+                <td>15:00 - 15:30</td>
+                <td><span class="status-pill status-booked">Pending</span></td>
+                <td><a href="driver-routes.html" class="btn btn-outline btn-sm">View Route</a></td>
+              </tr>
+              <tr>
+                <td><strong>#27</strong></td>
+                <td>LP10004</td>
+                <td>Barton Springs Solar Depot<br><span style="font-size:0.8rem; color:var(--gray-600);">2200 Barton Springs Rd</span></td>
+                <td>2 Pallets (450 kg)</td>
+                <td>16:00 - 16:45</td>
+                <td><span class="status-pill status-booked">Pending</span></td>
+                <td><a href="driver-routes.html" class="btn btn-outline btn-sm">View Route</a></td>
+              </tr>
+              <tr>
+                <td><strong>#28</strong></td>
+                <td>LP10005</td>
+                <td>Austin Metro Return Hub<br><span style="font-size:0.8rem; color:var(--gray-600);">8800 Airport Blvd</span></td>
+                <td>Vehicle Return & End-Shift</td>
+                <td>17:30 - 18:00</td>
+                <td><span class="status-pill status-booked">Shift End</span></td>
+                <td><a href="driver-routes.html" class="btn btn-outline btn-sm">View Route</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
