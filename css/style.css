@@ -5112,29 +5112,35 @@ textarea:focus {
   width: 100% !important;
 }
 
-/* 2. Mobile Menu Button Stability & Alignment */
+/* 2. Mobile Menu Button Stability & Alignment (Hidden on Desktop, Visible on Mobile/Tablet) */
 .dash-mobile-toggle {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 0.5rem !important;
-  min-height: 42px !important;
-  padding: 0.45rem 0.9rem !important;
-  background: var(--white) !important;
-  border: 1.5px solid var(--gray-300) !important;
-  border-radius: var(--radius-md) !important;
-  font-size: 0.875rem !important;
-  font-weight: 700 !important;
-  color: var(--navy-900) !important;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08) !important;
-  cursor: pointer !important;
-  flex-shrink: 0 !important;
+  display: none !important;
 }
 
-.dash-mobile-toggle:hover {
-  background: var(--gray-50) !important;
-  border-color: var(--blue-600) !important;
-  color: var(--blue-600) !important;
+@media (max-width: 1024px) {
+  .dash-mobile-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    min-height: 42px !important;
+    padding: 0.45rem 0.9rem !important;
+    background: var(--white) !important;
+    border: 1.5px solid var(--gray-300) !important;
+    border-radius: var(--radius-md) !important;
+    font-size: 0.875rem !important;
+    font-weight: 700 !important;
+    color: var(--navy-900) !important;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08) !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+  }
+
+  .dash-mobile-toggle:hover {
+    background: var(--gray-50) !important;
+    border-color: var(--blue-600) !important;
+    color: var(--blue-600) !important;
+  }
 }
 
 /* 3. Section & Sub-Section Sizing Adjustments (Home, Warehouse, Fleet) */
