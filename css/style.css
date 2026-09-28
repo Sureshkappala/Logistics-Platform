@@ -5019,6 +5019,77 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .container,
+  .container-sm,
+  .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .site-header,
+  .navbar {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Universal 1-Column Stacking for ALL Marketing Grids */
+  .how-it-works-grid,
+  .services-grid,
+  .solutions-grid,
+  .fleet-grid,
+  .warehouse-metrics-grid,
+  .stats-grid,
+  .footer-top,
+  .footer-grid,
+  .map-viz-grid,
+  .warehouse-grid,
+  .calc-grid,
+  .cert-grid,
+  .iot-sensor-grid,
+  .features-grid,
+  .values-grid,
+  .solutions-content-grid,
+  .hero-grid,
+  .split-content-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* All Cards Span Full Width of Container */
+  .step-card,
+  .service-card,
+  .solution-card,
+  .fleet-card,
+  .feature-card,
+  .value-card,
+  .how-it-works-step,
+  .testimonial-card,
+  .faq-item,
+  .auth-card,
+  .quote-calc-card,
+  .drawer-info-card,
+  .warehouse-metric-card,
+  .stat-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+    min-height: unset !important;
+  }
+
   .section-py {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
@@ -5038,3 +5109,4 @@ html, body {
     height: 190px !important;
   }
 }
+
