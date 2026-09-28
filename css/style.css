@@ -821,10 +821,42 @@ main:not(.dashboard-content-area):not(.auth-page-section) {
 }
 
 .stat-label {
-  font-size: 0.875rem;
-  color: var(--gray-500);
-  font-weight: 500;
-  margin-top: 0.2rem;
+  font-size: 0.95rem;
+  color: var(--navy-900);
+  font-weight: 700;
+  line-height: 1.35;
+  margin-top: 0.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.stat-card {
+  background: var(--white) !important;
+  border: 1.5px solid var(--border-color) !important;
+  border-radius: 16px !important;
+  padding: 1.75rem 1.5rem !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06) !important;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  height: auto !important;
+  min-height: 155px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.1) !important;
+  border-color: var(--blue-600) !important;
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 0.35rem;
 }
 
 .stat-disclaimer {
@@ -1792,6 +1824,91 @@ main:not(.dashboard-content-area):not(.auth-page-section) {
 
 .faq-item.active .faq-answer {
   padding-bottom: 1.25rem;
+}
+
+/* --- CTA BANNER SECTION (MARKETING & FREIGHT VERTICAL PAGES) --- */
+.cta-banner-section {
+  position: relative;
+  background: linear-gradient(135deg, #050b14 0%, #0a1128 50%, #132247 100%) !important;
+  color: var(--white) !important;
+  padding: 5rem 1.5rem !important;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta-banner-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.15) 0%, rgba(5, 11, 20, 0) 70%);
+  pointer-events: none;
+}
+
+.cta-banner-section .cta-inner-card {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+  margin: 0 auto;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+.cta-banner-section .cta-badge {
+  display: inline-block;
+  padding: 0.4rem 1.15rem;
+  background: rgba(249, 115, 22, 0.15);
+  border: 1px solid rgba(249, 115, 22, 0.4);
+  border-radius: var(--radius-full);
+  color: var(--amber-400);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.cta-banner-section .cta-heading {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--white) !important;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.cta-banner-section .cta-description {
+  font-size: 1.1rem;
+  color: var(--gray-300) !important;
+  max-width: 720px;
+  margin: 0 auto 2.25rem;
+  line-height: 1.6;
+}
+
+.cta-banner-section .cta-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.cta-banner-section .btn-outline-white {
+  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.cta-banner-section .btn-outline-white:hover {
+  border-color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
 }
 
 /* --- GRADIENT CTA SECTION (LIKE SCREENSHOT) --- */
