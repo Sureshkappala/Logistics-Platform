@@ -2553,6 +2553,148 @@ main:not(.dashboard-content-area):not(.auth-page-section) {
   gap: 0.5rem;
 }
 
+/* Dashboard User Credentials & Welcome Hero Banner */
+.dash-welcome-hero {
+  background: linear-gradient(135deg, #0a1128 0%, #132247 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.75rem;
+  color: var(--white);
+  box-shadow: 0 10px 30px -5px rgba(10, 17, 40, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.dash-welcome-hero::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.2) 0%, rgba(10, 17, 40, 0) 70%);
+  pointer-events: none;
+}
+
+.dash-welcome-title {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.dash-cred-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.35rem;
+  position: relative;
+  z-index: 2;
+}
+
+.dash-cred-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  color: var(--gray-200);
+}
+
+.dash-cred-badge svg {
+  color: #60a5fa;
+  flex-shrink: 0;
+}
+
+.dash-cred-badge strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.dash-session-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(16, 185, 129, 0.18);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  border-radius: var(--radius-full);
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: #34d399;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.dash-session-badge .status-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #10b981;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px #10b981;
+}
+
+.dash-welcome-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+/* User Profile Header Pill */
+.dash-user-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.35rem 0.85rem;
+  background: var(--white);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-full);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+.dash-user-pill-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--blue-600);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dash-user-pill-info {
+  text-align: left;
+  line-height: 1.25;
+}
+
+.dash-user-pill-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.dash-user-pill-role {
+  font-size: 0.7rem;
+  color: var(--gray-500);
+}
+
 /* Dashboard Metric Cards */
 .dash-metrics-row {
   display: grid;

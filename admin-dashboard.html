@@ -57,16 +57,55 @@
             <span>Menu</span>
           </button>
           <div>
-            <h1 class="dash-heading">Global Logistics Command Tower</h1>
-            <p class="dash-sub">Real-time network telematics, fleet density, and shipment volume analytics.</p>
+            <h1 class="dash-heading">Welcome Back, Ops Commander! 👏</h1>
+            <p class="dash-sub">September 2026 &bull; Global Operations Command Tower &bull; Level 4 Clearance</p>
           </div>
         </div>
-        <div style="display: flex; gap: 0.75rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="customer-dashboard.html" class="btn btn-outline btn-sm">Shipper Portal</a>
           <button class="btn btn-primary btn-sm" onclick="showToast('Control tower telemetry synced in real time.', 'success')">
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.033 8.033 0 01-15.357-2m15.357 2H15"></path></svg>
-            Live Telemetry Refresh
+            Sync Telemetry
           </button>
+          <div class="dash-user-pill">
+            <div class="dash-user-pill-avatar" style="background: var(--navy-700);">AD</div>
+            <div class="dash-user-pill-info">
+              <div class="dash-user-pill-name">Admin Commander 👏</div>
+              <div class="dash-user-pill-role">Global Ops &bull; Tower 1</div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- HERO USER CREDENTIALS & WELCOME BANNER (MATCHING REFERENCE) -->
+      <div class="dash-welcome-hero">
+        <h2 class="dash-welcome-title">
+          <span>Welcome back, Operations Commander</span>
+          <span style="font-size: 1.35rem;">👏</span>
+        </h2>
+        <div class="dash-cred-badges-row">
+          <div class="dash-cred-badge">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+            <span>Name: <strong>System Admin (Dispatch Lead)</strong></span>
+          </div>
+          <div class="dash-cred-badge">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            <span>Email: <strong>admin@stackly.com</strong></span>
+          </div>
+          <div class="dash-cred-badge">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            <span>Role: <strong>Global Ops Tower Admin</strong></span>
+          </div>
+          <div class="dash-session-badge">
+            <span class="status-dot"></span>
+            <span>SUPERVISOR SESSION ACTIVE</span>
+          </div>
+        </div>
+        <div class="dash-welcome-actions">
+          <a href="admin-fleet.html" class="btn btn-outline-white btn-sm">Fleet Deployment</a>
+          <a href="admin-routes.html" class="btn btn-sm" style="background: #10b981; border: 1px solid #10b981; color: #ffffff; font-weight: 700; border-radius: 8px;">+ Optimize Network Routes</a>
+        </div>
+      </div>
       <!-- OPERATIONAL ERROR & DISPATCH EXCEPTION ALERT BANNER -->
       <div class="dash-alert-banner dash-alert-error" id="adminAlertBanner" style="background: #fef2f2; border: 1.5px solid #fecaca; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; box-shadow: 0 2px 6px rgba(239, 68, 68, 0.08);">
         <div style="display: flex; align-items: flex-start; gap: 0.85rem;">

@@ -632,7 +632,7 @@ function initAuthForms() {
         }
       });
 
-      const roleTitle = role === 'driver' ? 'Fleet Driver (Marcus Rivera)' : (role === 'admin' ? 'Ops Commander' : 'Shipper (Sarah Jenkins)');
+      const roleTitle = role === 'driver' ? 'Fleet Driver (Marcus Rivera)' : (role === 'admin' ? 'Ops Commander' : 'Product Lead (Kappalasuresh92)');
       showToast(`👋 Welcome! Loaded ${roleTitle} credentials.`, 'info');
     });
   });
@@ -684,7 +684,7 @@ function initAuthForms() {
       } else if (role === 'admin' || email.includes('admin')) {
         welcomeMsg = '👋 Welcome, Operations Commander! Accessing Central Tower...';
       } else {
-        welcomeMsg = '👋 Welcome back, Sarah Jenkins! Accessing NexaCorp Portal...';
+        welcomeMsg = '👋 Welcome back, Kappalasuresh92! Accessing Cloud Workspace...';
       }
 
       showToast(welcomeMsg, 'success');
