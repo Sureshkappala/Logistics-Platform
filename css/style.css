@@ -4700,37 +4700,39 @@ div[style*="border-radius: var(--radius-xl)"] {
 
 
 /* ==========================================================================
-   GLOBAL STRUCTURED OUTERLINES & BORDER FRAMING SYSTEM
+   GLOBAL STRUCTURED OUTERLINES & BORDER FRAMING SYSTEM (OFFSET & DETACHED)
    ========================================================================== */
 
-/* 1. Global Section Dividers & Outerlines */
+/* 1. Global Section Dividers & Spacious Outerlines */
 .site-header {
   border-bottom: 1.5px solid var(--gray-200) !important;
 }
 
 .stats-strip {
-  border-top: 1px solid var(--gray-200) !important;
-  border-bottom: 1px solid var(--gray-200) !important;
+  border-top: 1.5px solid var(--gray-200) !important;
+  border-bottom: 1.5px solid var(--gray-200) !important;
 }
 
 .section-py {
-  border-bottom: 1px solid var(--gray-200);
+  border-bottom: 1.5px solid var(--gray-200);
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
 }
 
 .cta-section {
-  border-top: 1.5px solid rgba(255, 255, 255, 0.12) !important;
-  border-bottom: 1.5px solid rgba(255, 255, 255, 0.12) !important;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.15) !important;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.15) !important;
 }
 
 .site-footer {
-  border-top: 1.5px solid rgba(255, 255, 255, 0.12) !important;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.15) !important;
 }
 
 .footer-bottom-row {
   border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 2. Card, Container & Component Outerlines */
+/* 2. Detached / Offset Floating Outerlines on Cards & Modules (Without Touching the Box) */
 .service-card,
 .solution-card,
 .feature-card,
@@ -4744,8 +4746,10 @@ div[style*="border-radius: var(--radius-xl)"] {
 .drawer-info-card,
 .dash-card,
 .dash-stat-card {
-  border: 1.5px solid var(--gray-200) !important;
+  outline: 1.5px solid #cbd5e1 !important;
+  outline-offset: 4px !important;
   box-shadow: 0 2px 4px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02) !important;
+  transition: outline-offset 0.25s ease, outline-color 0.25s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
 }
 
 .service-card:hover,
@@ -4756,31 +4760,33 @@ div[style*="border-radius: var(--radius-xl)"] {
 .how-it-works-step:hover,
 .dash-card:hover,
 .dash-stat-card:hover {
-  border-color: var(--blue-400) !important;
+  outline-color: var(--blue-500) !important;
+  outline-offset: 6px !important;
 }
 
 /* 3. Dashboard Topbar & Structural Framing */
 .dashboard-topbar {
-  padding-bottom: 1.25rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1.5px solid var(--gray-200);
-  margin-bottom: 1.75rem;
+  margin-bottom: 2rem;
 }
 
 .dashboard-sidebar {
-  border-right: 1.5px solid rgba(255, 255, 255, 0.1) !important;
+  border-right: 1.5px solid rgba(255, 255, 255, 0.12) !important;
 }
 
 .sidebar-brand {
-  border-bottom: 1.5px solid rgba(255, 255, 255, 0.1) !important;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.12) !important;
 }
 
 .sidebar-profile {
-  border-bottom: 1.5px solid rgba(255, 255, 255, 0.1) !important;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.12) !important;
 }
 
-/* 4. Table & Data Grid Outerlines */
+/* 4. Table & Data Grid Detached Outerlines */
 .table-responsive {
-  border: 1.5px solid var(--gray-200) !important;
+  outline: 1.5px solid var(--gray-300) !important;
+  outline-offset: 4px !important;
   border-radius: var(--radius-lg) !important;
   overflow: hidden !important;
 }
@@ -4822,17 +4828,29 @@ textarea:focus {
   outline: none !important;
 }
 
-/* 6. Image & Visual Outerlines */
+/* 6. Image & Visual Floating Outerlines */
 .hero-image-wrapper,
 .about-image-wrapper,
 .fleet-image-wrap,
 .service-img-wrap {
-  border: 1.5px solid var(--gray-200) !important;
+  outline: 1.5px solid rgba(203, 213, 225, 0.8) !important;
+  outline-offset: 5px !important;
   border-radius: var(--radius-xl) !important;
   overflow: hidden !important;
 }
 
-/* 7. Tag & Badge Outerlines */
+.hero-track-box {
+  outline: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+  outline-offset: 4px !important;
+}
+
+/* 7. Floating Outerlines on Hero Badges & Telemetry Cards */
+.hero-floating-card,
+.hero-floating-badge-top {
+  outline: 1.5px solid rgba(255, 255, 255, 0.22) !important;
+  outline-offset: 4px !important;
+}
+
 .badge,
 .section-tag,
 .section-tag-amber,
