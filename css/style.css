@@ -371,24 +371,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 .badge-red .badge-dot { background-color: var(--red-500); }
 
-/* --- STICKY NAVBAR (CLEAN WHITE MODERN THEME) --- */
+/* --- STABLE FIXED NAVBAR (CLEAN WHITE MODERN THEME) --- */
 .site-header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: var(--white);
-  border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  transition: all var(--transition-base);
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 4.5rem !important;
+  z-index: 1000 !important;
+  background-color: var(--white) !important;
+  border-bottom: 1.5px solid var(--gray-200) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) !important;
+  transition: background-color var(--transition-base), box-shadow var(--transition-base);
 }
 
 .site-header.scrolled {
-  background-color: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+main:not(.dashboard-content-area):not(.auth-page-section) {
+  padding-top: 4.5rem;
 }
 
 .navbar {
@@ -4933,10 +4939,12 @@ textarea:focus {
 
 /* 1. Stable Fixed / Sticky Navigation Bar */
 .site-header {
-  position: sticky !important;
+  position: fixed !important;
   top: 0 !important;
   left: 0 !important;
+  right: 0 !important;
   width: 100% !important;
+  height: 4.5rem !important;
   z-index: 1000 !important;
   background-color: #ffffff !important;
   border-bottom: 1.5px solid var(--gray-200) !important;
