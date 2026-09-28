@@ -5090,12 +5090,16 @@ html, body {
   .values-grid,
   .solutions-content-grid,
   .hero-grid,
-  .split-content-grid {
+  .split-content-grid,
+  .dashboard-content-area div[style*="grid-template-columns"],
+  .container div[style*="grid-template-columns"],
+  main div[style*="grid-template-columns"] {
     display: grid !important;
     grid-template-columns: 1fr !important;
     gap: 1.25rem !important;
     width: 100% !important;
     max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   /* All Cards Span Full Width of Container */
@@ -5112,12 +5116,20 @@ html, body {
   .quote-calc-card,
   .drawer-info-card,
   .warehouse-metric-card,
-  .stat-item {
+  .stat-item,
+  .dash-card,
+  .dash-stat-card {
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
     height: auto !important;
     min-height: unset !important;
+    overflow: hidden !important;
+  }
+
+  canvas {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .section-py {
@@ -5139,4 +5151,5 @@ html, body {
     height: 190px !important;
   }
 }
+
 
