@@ -3124,20 +3124,80 @@ main:not(.dashboard-content-area):not(.auth-page-section) {
 
   .dashboard-topbar > div:last-child {
     display: flex !important;
-    gap: 0.65rem !important;
+    gap: 0.5rem !important;
     width: 100% !important;
-    flex-wrap: nowrap !important;
+    flex-wrap: wrap !important;
   }
 
   .dashboard-topbar > div:last-child .btn,
   .dashboard-topbar > div:last-child a.btn,
   .dashboard-topbar > div:last-child button.btn {
-    flex: 1 1 0 !important;
+    flex: 1 1 auto !important;
     text-align: center !important;
     justify-content: center !important;
-    padding: 0.65rem 0.75rem !important;
-    font-size: 0.825rem !important;
-    white-space: nowrap !important;
+    padding: 0.55rem 0.75rem !important;
+    font-size: 0.8rem !important;
+    white-space: normal !important;
+    min-height: 38px !important;
+  }
+
+  .dashboard-topbar .dash-user-pill {
+    display: none !important;
+  }
+
+  .dash-welcome-hero {
+    padding: 1.25rem 1rem !important;
+    margin-bottom: 1.25rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .dash-welcome-title {
+    font-size: 1.25rem !important;
+    flex-wrap: wrap !important;
+    gap: 0.35rem !important;
+  }
+
+  .dash-cred-badges-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    gap: 0.5rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .dash-cred-badge {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.8rem !important;
+    justify-content: flex-start !important;
+    word-break: break-all !important;
+    flex-wrap: wrap !important;
+    gap: 0.35rem !important;
+  }
+
+  .dash-session-badge {
+    align-self: flex-start !important;
+    margin-top: 0.15rem !important;
+  }
+
+  .dash-welcome-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.5rem !important;
+  }
+
+  .dash-welcome-actions .btn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 0.65rem 1rem !important;
+    box-sizing: border-box !important;
   }
 
   .dash-metrics-row {
