@@ -4697,3 +4697,150 @@ div[style*="border-radius: var(--radius-xl)"] {
 .page-hero, .page-header {
   animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
+
+
+/* ==========================================================================
+   GLOBAL STRUCTURED OUTERLINES & BORDER FRAMING SYSTEM
+   ========================================================================== */
+
+/* 1. Global Section Dividers & Outerlines */
+.site-header {
+  border-bottom: 1.5px solid var(--gray-200) !important;
+}
+
+.stats-strip {
+  border-top: 1px solid var(--gray-200) !important;
+  border-bottom: 1px solid var(--gray-200) !important;
+}
+
+.section-py {
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.cta-section {
+  border-top: 1.5px solid rgba(255, 255, 255, 0.12) !important;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.site-footer {
+  border-top: 1.5px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.footer-bottom-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* 2. Card, Container & Component Outerlines */
+.service-card,
+.solution-card,
+.feature-card,
+.fleet-card,
+.value-card,
+.how-it-works-step,
+.testimonial-card,
+.faq-item,
+.auth-card,
+.quote-calc-card,
+.drawer-info-card,
+.dash-card,
+.dash-stat-card {
+  border: 1.5px solid var(--gray-200) !important;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02) !important;
+}
+
+.service-card:hover,
+.solution-card:hover,
+.feature-card:hover,
+.fleet-card:hover,
+.value-card:hover,
+.how-it-works-step:hover,
+.dash-card:hover,
+.dash-stat-card:hover {
+  border-color: var(--blue-400) !important;
+}
+
+/* 3. Dashboard Topbar & Structural Framing */
+.dashboard-topbar {
+  padding-bottom: 1.25rem;
+  border-bottom: 1.5px solid var(--gray-200);
+  margin-bottom: 1.75rem;
+}
+
+.dashboard-sidebar {
+  border-right: 1.5px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.sidebar-brand {
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.sidebar-profile {
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 4. Table & Data Grid Outerlines */
+.table-responsive {
+  border: 1.5px solid var(--gray-200) !important;
+  border-radius: var(--radius-lg) !important;
+  overflow: hidden !important;
+}
+
+.dash-table th,
+.sla-table th {
+  border-bottom: 1.5px solid var(--gray-200) !important;
+}
+
+.dash-table td,
+.sla-table td {
+  border-bottom: 1px solid var(--gray-100) !important;
+}
+
+.dash-table tr:last-child td,
+.sla-table tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* 5. Form Input, Select & Search Outerlines */
+.form-control,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+select,
+textarea {
+  border: 1.5px solid var(--gray-300) !important;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast) !important;
+}
+
+.form-control:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--blue-600) !important;
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.18) !important;
+  outline: none !important;
+}
+
+/* 6. Image & Visual Outerlines */
+.hero-image-wrapper,
+.about-image-wrapper,
+.fleet-image-wrap,
+.service-img-wrap {
+  border: 1.5px solid var(--gray-200) !important;
+  border-radius: var(--radius-xl) !important;
+  overflow: hidden !important;
+}
+
+/* 7. Tag & Badge Outerlines */
+.badge,
+.section-tag,
+.section-tag-amber,
+.hero-badge,
+.badge-tech {
+  border: 1px solid rgba(0, 102, 255, 0.25);
+}
+
+.section-tag-amber {
+  border-color: rgba(249, 115, 22, 0.3) !important;
+}
