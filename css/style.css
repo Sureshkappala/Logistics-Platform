@@ -2318,6 +2318,79 @@ main:not(.dashboard-content-area):not(.auth-page-section) {
   color: var(--blue-600);
 }
 
+/* Demo Credentials & Welcome Card */
+.demo-credentials-box {
+  background: linear-gradient(135deg, #f0f7ff 0%, #ebf3ff 100%);
+  border: 1.5px solid #bfdbfe;
+  border-radius: var(--radius-lg);
+  padding: 1.1rem 1.15rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 102, 255, 0.08);
+}
+
+.demo-credentials-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--blue-700);
+  margin-bottom: 0.35rem;
+}
+
+.demo-credentials-welcome {
+  font-size: 0.825rem;
+  color: var(--gray-700);
+  margin-bottom: 0.75rem;
+  line-height: 1.45;
+}
+
+.demo-credentials-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.demo-cred-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.55rem 0.85rem;
+  background: var(--white);
+  border: 1.5px solid #cbd5e1;
+  border-radius: var(--radius-md);
+  font-size: 0.825rem;
+  color: var(--navy-900);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.demo-cred-btn:hover {
+  border-color: var(--blue-600);
+  background: #f8fafc;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 102, 255, 0.12);
+}
+
+.demo-cred-role {
+  font-weight: 700;
+  color: var(--blue-700);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.demo-cred-val {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--gray-600);
+  background: var(--gray-100);
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+}
+
 .form-row-2col {
   display: grid;
   grid-template-columns: 1fr 1fr;

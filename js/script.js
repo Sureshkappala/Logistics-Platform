@@ -600,6 +600,43 @@ function initAuthForms() {
     });
   });
 
+  // Demo Credentials Auto-Fill Buttons & Welcome Greeting
+  const demoCredButtons = document.querySelectorAll('.demo-cred-btn');
+  demoCredButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const email = btn.getAttribute('data-email');
+      const pass = btn.getAttribute('data-pass');
+      const role = btn.getAttribute('data-role');
+      
+      const emailInput = document.getElementById('loginEmail');
+      const passInput = document.getElementById('loginPass');
+      const roleInput = document.getElementById('loginRole');
+      
+      if (emailInput) {
+        emailInput.value = email;
+        emailInput.classList.remove('is-invalid');
+      }
+      if (passInput) {
+        passInput.value = pass;
+        passInput.classList.remove('is-invalid');
+      }
+      if (roleInput) roleInput.value = role;
+
+      // Update role buttons UI
+      const authContainer = btn.closest('.auth-card') || document;
+      authContainer.querySelectorAll('.role-opt-btn').forEach(b => {
+        if (b.getAttribute('data-role') === role) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+
+      const roleTitle = role === 'driver' ? 'Fleet Driver (Marcus Rivera)' : (role === 'admin' ? 'Ops Commander' : 'Shipper (Sarah Jenkins)');
+      showToast(`👋 Welcome! Loaded ${roleTitle} credentials.`, 'info');
+    });
+  });
+
   // Login form handler & Logout refresh
   const loginForm = document.getElementById('loginForm');
   if (loginForm) {
@@ -641,12 +678,21 @@ function initAuthForms() {
         return;
       }
 
-      showToast('Authentication successful. Redirecting to dashboard...', 'success');
+      let welcomeMsg = '👋 Welcome back to Stackly Logistics!';
+      if (role === 'driver' || email.includes('driver')) {
+        welcomeMsg = '👋 Welcome aboard, Marcus Rivera! Accessing Driver Hub...';
+      } else if (role === 'admin' || email.includes('admin')) {
+        welcomeMsg = '👋 Welcome, Operations Commander! Accessing Central Tower...';
+      } else {
+        welcomeMsg = '👋 Welcome back, Sarah Jenkins! Accessing NexaCorp Portal...';
+      }
+
+      showToast(welcomeMsg, 'success');
       setTimeout(() => {
-        if (role === 'admin') window.location.href = 'admin-dashboard.html';
-        else if (role === 'driver') window.location.href = 'driver-dashboard.html';
+        if (role === 'admin' || email.includes('admin')) window.location.href = 'admin-dashboard.html';
+        else if (role === 'driver' || email.includes('driver')) window.location.href = 'driver-dashboard.html';
         else window.location.href = 'customer-dashboard.html';
-      }, 1000);
+      }, 900);
     });
   }
 
