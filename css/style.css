@@ -2693,52 +2693,82 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .dashboard-topbar {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.85rem;
-    margin-bottom: 1.25rem;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1rem !important;
+    margin-bottom: 1.25rem !important;
   }
 
   .dashboard-topbar > div:first-child {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 0.85rem !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  .dash-mobile-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.45rem !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    padding: 0 0.85rem !important;
+    background: var(--white) !important;
+    border: 1.5px solid var(--gray-300) !important;
+    border-radius: var(--radius-md) !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    color: var(--navy-900) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06) !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+  }
+
+  .dash-mobile-toggle:hover,
+  .dash-mobile-toggle:active {
+    background: var(--gray-50) !important;
+    border-color: var(--blue-600) !important;
+    color: var(--blue-600) !important;
   }
 
   .dashboard-topbar .dash-heading {
-    font-size: 1.35rem;
-    font-weight: 800;
-    margin: 0;
-    line-height: 1.25;
-    color: var(--navy-900);
+    font-size: 1.35rem !important;
+    font-weight: 800 !important;
+    margin: 0 !important;
+    line-height: 1.2 !important;
+    color: var(--navy-900) !important;
+    text-align: left !important;
   }
 
   .dashboard-topbar .dash-sub {
-    font-size: 0.8rem;
-    color: var(--gray-500);
-    line-height: 1.4;
-    margin-top: 0.2rem;
+    font-size: 0.8rem !important;
+    color: var(--gray-500) !important;
+    line-height: 1.35 !important;
+    margin-top: 0.2rem !important;
+    text-align: left !important;
   }
 
   .dashboard-topbar > div:last-child {
-    display: flex;
-    gap: 0.5rem;
-    width: 100%;
-    flex-wrap: wrap;
+    display: flex !important;
+    gap: 0.65rem !important;
+    width: 100% !important;
+    flex-wrap: nowrap !important;
   }
 
   .dashboard-topbar > div:last-child .btn,
   .dashboard-topbar > div:last-child a.btn,
   .dashboard-topbar > div:last-child button.btn {
-    flex: 1 1 calc(50% - 0.25rem);
-    text-align: center;
-    justify-content: center;
-    padding: 0.6rem 0.65rem;
-    font-size: 0.825rem;
-    white-space: nowrap;
+    flex: 1 1 0 !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 0.65rem 0.75rem !important;
+    font-size: 0.825rem !important;
+    white-space: nowrap !important;
   }
 
   .dash-metrics-row {
