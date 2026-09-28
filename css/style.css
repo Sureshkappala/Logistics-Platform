@@ -4159,8 +4159,8 @@ div[style*="border-radius: var(--radius-xl)"] {
 }
 
 /* Image container column inside split sections */
-.solutions-content-grid > div:has(img),
-.solutions-content-grid div[style*="border-radius"],
+.solutions-content-grid > div:last-child,
+.solutions-content-grid .split-img-column,
 .hero-visual,
 .hero-image-wrapper {
   position: relative !important;
@@ -4173,7 +4173,8 @@ div[style*="border-radius: var(--radius-xl)"] {
 }
 
 /* Full coverage image inside split sections */
-.solutions-content-grid img,
+.solutions-content-grid > div:last-child img,
+.solutions-content-grid .split-img-column img,
 .hero-image-wrapper img {
   width: 100% !important;
   height: 100% !important;
@@ -4280,8 +4281,8 @@ div[style*="border-radius: var(--radius-xl)"] {
     gap: 2.25rem !important;
   }
   
-  .solutions-content-grid > div:has(img),
-  .solutions-content-grid div[style*="border-radius"] {
+  .solutions-content-grid > div:last-child,
+  .solutions-content-grid .split-img-column {
     min-height: 280px !important;
     height: 320px !important;
   }
