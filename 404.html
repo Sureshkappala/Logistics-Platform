@@ -3,49 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - Route Not Found | Stackly</title>
+  <title>404 - Route Not Found | Stackly Logistics</title>
   <meta name="description" content="The requested logistics route or page could not be located in our dispatch directory.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; background-color: var(--navy-950); margin: 0; color: var(--white);">
+<body class="error-page-body">
 
-  <main class="auth-page-section" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 4rem 1.5rem; text-align: center;">
-    <div style="max-width: 620px; margin: 0 auto; width: 100%;">
+  <main class="error-page-section">
+    <div class="error-page-card">
       
       <!-- Stackly Brand Logo -->
       <div style="margin-bottom: 2rem;">
         <a href="index.html" aria-label="Return to Stackly Home">
-          <img src="assets/images/logo-white.webp" alt="Stackly" class="brand-logo-img" width="160" height="46" style="display: inline-block;">
+          <img src="assets/images/logo-white.webp" alt="Stackly Logistics" class="brand-logo-img" width="160" height="46" style="display: inline-block;">
         </a>
       </div>
 
-      <!-- Transportation Themed SVG -->
-      <div style="width: 130px; height: 130px; margin: 0 auto 1.75rem; background-color: rgba(249, 115, 22, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px dashed var(--amber-500);">
-        <svg width="64" height="64" fill="none" stroke="#f97316" stroke-width="1.8" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
-          <circle cx="12" cy="11" r="3" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"/>
-          <line x1="4" y1="4" x2="20" y2="20" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Transportation Waypoint Alert Badge -->
+      <div class="error-badge-glitch">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16h2v2h-2zm0-6h2v4h-2z"/>
         </svg>
+        <span>Error 404 &bull; Deadhead Navigation</span>
       </div>
 
-      <div class="section-tag section-tag-amber" style="margin-bottom: 0.75rem;">Error 404 &bull; Deadhead Navigation</div>
-      <h1 style="font-size: 3rem; font-weight: 900; margin-bottom: 0.75rem; letter-spacing: -0.02em; color: var(--white);">Route Not Found</h1>
-      <p style="font-size: 1.125rem; color: var(--gray-300); margin-bottom: 2.25rem; line-height: 1.6;">
-        The waypoint or logistics page you are attempting to reach has been rerouted, decommissioned, or does not exist on this network.
+      <!-- 404 Visual Heading -->
+      <div class="error-code-display">404</div>
+      <h1 class="error-title">Route Waypoint Not Found</h1>
+      <p class="error-desc">
+        The freight route, dispatch terminal, or manifest page you are attempting to reach has been rerouted, decommissioned, or does not exist on the Stackly network.
       </p>
 
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="index.html" class="btn btn-primary btn-lg">Back to Home</a>
-        <button onclick="window.history.back()" class="btn btn-outline-white btn-lg" style="cursor: pointer;">Go Back</button>
+      <!-- Main Action Buttons -->
+      <div class="error-actions">
+        <a href="index.html" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right: 0.4rem; vertical-align: middle;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+          Return to Fleet Home
+        </a>
+        <a href="tracking.html" class="btn btn-outline-white btn-lg">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right: 0.4rem; vertical-align: middle;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+          </svg>
+          Live Tracking
+        </a>
+        <button onclick="window.history.back()" class="btn btn-outline-white btn-lg" style="cursor: pointer;">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right: 0.4rem; vertical-align: middle;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+          </svg>
+          Go Back
+        </button>
       </div>
 
-      <!-- Quick Navigation Hint -->
-      <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.9rem; color: var(--gray-400);">
-        Need dispatch assistance? <a href="contact.html" style="color: #2dd4bf; text-decoration: underline;">Contact 24/7 Operations</a>
+      <!-- Fast Reroute Portals Grid -->
+      <div class="error-quicklinks-grid">
+        <a href="services.html" class="error-quicklink-item">
+          <svg width="16" height="16" fill="none" stroke="#2563eb" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+          </svg>
+          <span>Freight Services</span>
+        </a>
+        <a href="shipping-quote.html" class="error-quicklink-item">
+          <svg width="16" height="16" fill="none" stroke="#f97316" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+          </svg>
+          <span>Rate Calculator</span>
+        </a>
+        <a href="contact.html" class="error-quicklink-item">
+          <svg width="16" height="16" fill="none" stroke="#10b981" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+          <span>24/7 Operations</span>
+        </a>
       </div>
+
     </div>
   </main>
 
