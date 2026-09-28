@@ -764,6 +764,13 @@ function initTestimonialSlider() {
 function initFAQAccordion() {
   const faqItems = document.querySelectorAll('.faq-item');
 
+  // Ensure all FAQ items are closed by default
+  faqItems.forEach(item => {
+    item.classList.remove('active');
+    const answerPanel = item.querySelector('.faq-answer');
+    if (answerPanel) answerPanel.style.maxHeight = null;
+  });
+
   faqItems.forEach(item => {
     const questionBtn = item.querySelector('.faq-question');
     const answerPanel = item.querySelector('.faq-answer');
@@ -787,7 +794,7 @@ function initFAQAccordion() {
         answerPanel.style.maxHeight = null;
       } else {
         item.classList.add('active');
-        answerPanel.style.maxHeight = answerPanel.scrollHeight + 'px';
+        answerPanel.style.maxHeight = answerPanel.scrollHeight + 30 + 'px';
       }
     });
   });

@@ -19,7 +19,7 @@
     <aside class="dashboard-sidebar" aria-label="Customer Navigation">
       <div class="sidebar-brand" style="padding: 1.25rem 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: space-between;">
         <a href="customer-dashboard.html" aria-label="Stackly Homepage">
-          <img src="assets/images/logo-white.png" alt="Stackly" width="130" height="38" style="display: block;">
+          <img src="assets/images/logo-white.webp" alt="Stackly" width="130" height="38" style="display: block;">
         </a>
         <button type="button" class="sidebar-close-btn" aria-label="Close Navigation Drawer">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -64,6 +64,28 @@
           <a href="shipping-quote.html" class="btn btn-outline btn-sm">Rate Calculator</a>
           <a href="customer-book.html" class="btn btn-accent btn-sm">+ Book New Shipment</a>
         </div>
+      </div>
+
+      <!-- OPERATIONAL ERROR & EXCEPTION ALERT BANNER -->
+      <div class="dash-alert-banner dash-alert-error" id="dashErrorAlert" style="background: #fef2f2; border: 1.5px solid #fecaca; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; box-shadow: 0 2px 6px rgba(239, 68, 68, 0.08);">
+        <div style="display: flex; align-items: flex-start; gap: 0.85rem;">
+          <div style="width: 34px; height: 34px; border-radius: 50%; background: #fee2e2; color: #ef4444; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.1rem; font-weight: 800;">
+            &#9888;
+          </div>
+          <div>
+            <div style="font-weight: 700; color: #991b1b; font-size: 0.95rem; margin-bottom: 0.2rem;">
+              Shipment Exception Alert &bull; Corridor Weather Delay
+            </div>
+            <div style="font-size: 0.85rem; color: #b91c1c; line-height: 1.45;">
+              Active order <strong>STK-88410-US</strong> (Chicago &rarr; Dallas) reported an I-35 severe weather alert. Telematics sensors remain fully active (+3.8&deg;C).
+            </div>
+            <div style="margin-top: 0.6rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="customer-track.html" class="btn btn-sm" style="background: #dc2626; color: #fff; padding: 0.35rem 0.75rem; font-size: 0.8rem; border-radius: 6px;">View Live Telematics</a>
+              <button type="button" class="btn btn-sm" style="background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; padding: 0.35rem 0.75rem; font-size: 0.8rem; border-radius: 6px;" onclick="showToast('Reroute dispatch approved for STK-88410-US.', 'success'); document.getElementById('dashErrorAlert').style.display='none';">Acknowledge Detour</button>
+            </div>
+          </div>
+        </div>
+        <button type="button" aria-label="Dismiss Alert" style="color: #991b1b; padding: 0.25rem; font-size: 1.25rem; line-height: 1; cursor: pointer; border: none; background: transparent;" onclick="document.getElementById('dashErrorAlert').style.display='none';">&times;</button>
       </div>
 
       <!-- KPI METRIC CARDS -->
