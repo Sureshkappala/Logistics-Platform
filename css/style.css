@@ -2808,6 +2808,55 @@ main:not(.dashboard-content-area):not(.auth-page-section) {
   background-color: var(--blue-50);
 }
 
+/* Dashboard Quick Rate Calculator Estimate Bar */
+.dash-rate-estimate-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: var(--gray-50);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.dash-rate-estimate-grid {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.dash-rate-estimate-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 640px) {
+  .dash-rate-estimate-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.85rem !important;
+    padding: 1rem !important;
+  }
+  
+  .dash-rate-estimate-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+  }
+
+  .dash-rate-estimate-bar .btn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 0.65rem 1rem !important;
+  }
+}
+
 /* --- QUOTE CALCULATOR --- */
 .quote-calc-card {
   background-color: var(--white);
