@@ -22,6 +22,31 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactFormValidation();
 });
 
+/* Global scroll-locking utilities for mobile menus and dashboard drawers */
+let bodyScrollPosition = 0;
+
+function disableBodyScroll() {
+  bodyScrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  document.documentElement.classList.add('no-scroll');
+  document.body.classList.add('no-scroll');
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${bodyScrollPosition}px`;
+  document.body.style.left = '0';
+  document.body.style.right = '0';
+  document.body.style.width = '100%';
+}
+
+function enableBodyScroll() {
+  document.documentElement.classList.remove('no-scroll');
+  document.body.classList.remove('no-scroll');
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.left = '';
+  document.body.style.right = '';
+  document.body.style.width = '';
+  window.scrollTo(0, bodyScrollPosition);
+}
+
 /* ==========================================================================
    1. NAVBAR & MOBILE DRAWER
    ========================================================================== */
@@ -53,15 +78,13 @@ function initMobileDrawer() {
   const openDrawer = () => {
     drawer.classList.add('active');
     overlay.classList.add('active');
-    document.documentElement.classList.add('no-scroll');
-    document.body.classList.add('no-scroll');
+    disableBodyScroll();
   };
 
   const closeDrawer = () => {
     drawer.classList.remove('active');
     overlay.classList.remove('active');
-    document.documentElement.classList.remove('no-scroll');
-    document.body.classList.remove('no-scroll');
+    enableBodyScroll();
   };
 
   overlay.addEventListener('touchmove', (e) => {
@@ -874,15 +897,13 @@ function initDashboardSidebar() {
   const openSidebar = () => {
     sidebar.classList.add('active');
     overlay.classList.add('active');
-    document.documentElement.classList.add('no-scroll');
-    document.body.classList.add('no-scroll');
+    disableBodyScroll();
   };
 
   const closeSidebar = () => {
     sidebar.classList.remove('active');
     overlay.classList.remove('active');
-    document.documentElement.classList.remove('no-scroll');
-    document.body.classList.remove('no-scroll');
+    enableBodyScroll();
   };
 
   overlay.addEventListener('touchmove', (e) => {
