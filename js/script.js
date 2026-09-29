@@ -53,14 +53,22 @@ function initMobileDrawer() {
   const openDrawer = () => {
     drawer.classList.add('active');
     overlay.classList.add('active');
+    document.documentElement.classList.add('no-scroll');
     document.body.classList.add('no-scroll');
   };
 
   const closeDrawer = () => {
     drawer.classList.remove('active');
     overlay.classList.remove('active');
+    document.documentElement.classList.remove('no-scroll');
     document.body.classList.remove('no-scroll');
   };
+
+  overlay.addEventListener('touchmove', (e) => {
+    if (drawer.classList.contains('active')) {
+      e.preventDefault();
+    }
+  }, { passive: false });
 
   if (hamburgerBtn) hamburgerBtn.addEventListener('click', openDrawer);
   if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
@@ -866,14 +874,22 @@ function initDashboardSidebar() {
   const openSidebar = () => {
     sidebar.classList.add('active');
     overlay.classList.add('active');
+    document.documentElement.classList.add('no-scroll');
     document.body.classList.add('no-scroll');
   };
 
   const closeSidebar = () => {
     sidebar.classList.remove('active');
     overlay.classList.remove('active');
+    document.documentElement.classList.remove('no-scroll');
     document.body.classList.remove('no-scroll');
   };
+
+  overlay.addEventListener('touchmove', (e) => {
+    if (sidebar.classList.contains('active')) {
+      e.preventDefault();
+    }
+  }, { passive: false });
 
   toggleBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
